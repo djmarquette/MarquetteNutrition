@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MNF4.ViewModels.ContactListViewModel>
+           
+@ViewData["Count"] Contact(s) meet search criteria
+
+@{ 
+    var grid = new WebGrid(Model, canPage: true, ajaxUpdateContainerId: "gridContainer", rowsPerPage: 20);
+    grid.Pager(mode:WebGridPagerModes.All, previousText: "Prev", nextText: "Next", firstText: "<< First", lastText: "Last >>");
+}
+<div id="gridContainer">
+    @grid.GetHtml(htmlAttributes: new { id = "grid" }, alternatingRowStyle: "altGridRow",
+        columns: grid.Columns(
+        grid.Column(header: "Contact Name", format: 
+            (item) => @Html.ActionLink((string)item.contact.FirstName + " " + (string)item.contact.LastName, "Details", "Contact", new { id = item.contact.ID }, null), canSort: false),
+            grid.Column(header: "Phone", format: (item) => item.contact.Phone, canSort: false),
+        grid.Column(header: "Email Address", format: (item) => item.contact.EmailAddress, canSort: false),
+        grid.Column(header: "Source", format: (item) => item.source.Name, canSort: false),
+        grid.Column(header: "Submit Date", format: (item) => item.contact.SubmitDate, canSort: false),
+        grid.Column(header: "Contacted?", format: (item) => item.contact.Contacted, canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Edit", "Edit", new { id = item.contact.ID }), canSort: false ),
+        grid.Column(format: (item) => @Html.ActionLink("Delete", "Delete", new { id = item.contact.ID }) )
+    ))
+</div>
+<p id="exportLink">
+    @Html.ActionLink("Export to MS Excel", "ExportToExcel", null, grid)
+</p>

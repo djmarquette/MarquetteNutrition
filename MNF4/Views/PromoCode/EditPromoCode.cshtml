@@ -1,0 +1,25 @@
+﻿@model MNF4.ViewModels.PromoFormViewModel
+
+@{
+    ViewBag.Title = "EditPromoCode";
+}
+
+<h1>Edit Promo Code</h1>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Edit [ @Model.Code ] Details</legend>
+        
+        @Html.Partial("_PromoCodeFormPartial")
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

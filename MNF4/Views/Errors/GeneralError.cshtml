@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Page Error";
+}
+
+<h2 class="error">Page Error</h2>
+
+<h3>
+    We're sorry, but there was an error with your request.&nbsp; Please verify that you have 
+    entered the correct web address for the desired page.&nbsp; If you continue to have a problem, 
+    please send an email to "webmaster" at marquettenutrition.com.
+</h3>
+
+<p>@ViewData["ErrorMsg"]</p>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+

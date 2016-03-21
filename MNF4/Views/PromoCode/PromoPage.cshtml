@@ -1,0 +1,24 @@
+﻿@model MNF4.ViewModels.PromoDisplayViewModel
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+@if (Model.Active)
+{
+    <h1>@Model.Name</h1>
+
+    <div>
+        @Html.Raw(Model.Markup)
+    </div>
+
+    <div class="clear">
+        @Html.Partial("_OptInPartial", new MNF4.ViewModels.OptInViewModel(Model.oiMessage, Model.oiResult))
+    </div>
+}
+else
+{
+    <div>
+        There is nothing for you here!  Go away !!
+    </div>
+}

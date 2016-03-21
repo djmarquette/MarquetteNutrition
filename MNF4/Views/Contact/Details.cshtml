@@ -1,0 +1,19 @@
+﻿@model MNF4.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details for @ViewBag.Name</h1>
+
+<fieldset>
+    <legend>Contact</legend>
+
+    @Html.Partial("_ContactDetailsPartial")
+
+</fieldset>
+<p class="noPrint">
+    @Html.ActionLink("Make Client", "Make", "Client", new { id = Model.ID }, null) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "List")
+</p>

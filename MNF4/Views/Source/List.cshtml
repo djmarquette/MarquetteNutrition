@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MNF4.Models.Source>
+@{
+    ViewBag.Title = "Sources";
+}
+
+<h1>Source List</h1>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@{ 
+    var grid = new WebGrid(Model, canPage: true, ajaxUpdateContainerId: "grid", rowsPerPage: 20);
+    grid.Pager(WebGridPagerModes.All, firstText: "First", lastText: "Last", previousText: "Prev", nextText: "Next");
+   
+    @grid.GetHtml(htmlAttributes: new { id = "grid" }, alternatingRowStyle: "altGridRow",
+        columns: grid.Columns(
+        grid.Column(header: "Source Name", format:
+                    (item) => @Html.ActionLink((string)item.Name, "Details", "Source", new { id = item.ID }, null), canSort: false),
+        grid.Column(header: "Notes", format: (item) => @CustomHelpers.Truncate(item.Notes, 50), canSort: false),
+        grid.Column(header: "Start Date", format: (item) => item.StartDate, canSort: false),
+        grid.Column(header: "End Date", format: (item) => item.EndDate, canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Edit", "Edit", new { id = item.ID }), canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Delete", "Delete", new { id = item.ID }))
+    ));
+}

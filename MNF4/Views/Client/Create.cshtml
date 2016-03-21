@@ -1,0 +1,28 @@
+﻿@model MNF4.ViewModels.ClientFormViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Create New Client</h1>
+
+@using (Html.BeginForm("Create","Client")) {
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Client</legend>
+
+        @Html.Partial("_ClientFormPartial")
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@Content.Script("jquery.validate.min.js", Url)
+@Content.Script("jquery.validate.unobtrusive.min.js", Url)

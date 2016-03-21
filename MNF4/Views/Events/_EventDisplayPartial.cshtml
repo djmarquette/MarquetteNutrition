@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MNF4.ViewModels.EventListViewModel>
+
+
+@if (Model.Any())
+{
+    <div>(Click for Details)</div>
+    foreach (var item in Model)
+    {
+        <div itemscope="itemscope" itemtype="http://schema.org/BusinessEvent">
+            <div class="accordion">
+                <h3 id="eventTitle" >
+                    <meta itemprop="name" content="@item.mnfEvent.Name" />
+                    <meta itemprop="startDate" content="@item.mnfEvent.StartTime.ToString("s")" />
+                    <meta itemprop="endDate" content="@item.mnfEvent.EndTime.ToString("s")" />
+
+                    @string.Format("{0:g}", item.mnfEvent.StartTime) &nbsp;
+                    "@item.mnfEvent.Name" &nbsp;
+                    [ @item.mnfEvent.EventType.Name ]
+                </h3>
+                <div id="eventMarkup">
+                    @Html.Raw(item.mnfEvent.EventMarkup)
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <h4>
+        There are no events scheduled at this time, but enter your name and email address to receive our newsletter 
+        and stay informed of upcoming classes, seminars, or other events.
+    </h4>
+}

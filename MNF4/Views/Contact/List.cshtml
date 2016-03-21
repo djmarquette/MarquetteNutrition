@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MNF4.ViewModels.ContactListViewModel>
+
+@{
+    ViewBag.Title = "Contact List";
+}
+
+<h1>MNF Contact Submissions (@ViewData["Count"])</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Index")
+</p>
+
+@using (Ajax.BeginForm("Search", new AjaxOptions
+{
+    HttpMethod = "Get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "contactList"
+}))
+{        
+    <input type="text" name="q" />
+    <input id="btnSubmit" type="submit" value="Search" />
+}
+<br />                
+
+<div id="contactList">
+    @Html.Partial("_ContactListPartial")
+</div>

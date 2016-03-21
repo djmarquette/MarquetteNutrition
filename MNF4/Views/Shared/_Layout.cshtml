@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <title>Marquette Nutrition & Fitness | @ViewBag.Title</title>
+        <meta name="description" content="@ViewBag.Description" />
+        <meta name="robots" content="index" />
+        <meta name="keywords" content="dietitian,dietician,nutritionist,dietary supplements,fitness,nutrition,celiac,PCOS,
+        food sensitivities,food allergy,food allergy testing,LEAP,MRT,sports nutrition,nutritional supplements,vegetarian,
+        health fitness specialist,supplements,weight loss" />
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content="Austin" />
+        <meta name="geo.position" content="30.212322;-97.830884" />
+        <meta name="ICBM" content="30.212322, -97.830884" />
+        <meta name="google-site-verification" content="oWqmW6H9PjSi73gd7MQFIHXCSKTvPQUM5i7jVQJeZ-8" />
+        <meta name="msapplication-TileColor" content="#8BC63F"/>
+        <meta name="msapplication-TileImage"content="~/Content/Images/MNFicon.png" />
+        
+        @Scripts.Render("~/bundles/jquery", "~/bundles/MNFScripts")
+        @Scripts.Render("~/bundles/jqueryui", "~/bundles/jqueryval")
+
+        @Styles.Render("~/Content/css", "~/Content/themes/base/css", "~/Content/themes/le-frog/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+        @RenderSection("scripts", required: false)
+        <link rel="shortcut icon" href="~/Content/Images/MNFicon.png"/>
+        
+    </head>
+    <body id="linearBg2" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <div id="top" class="page">
+            <header>
+                @*<div id="logindisplay"> 
+                    @Html.Partial("_LoginPartial")
+                </div>*@
+
+                @Html.Partial("_ViewSwitcher")
+                <div id="LayoutTitle" class="center">
+                        @*<ul id="socialIconsTop">
+                            <li><a class="socialLink" href="http://www.linkedin.com/in/christinemarquette"  target="_blank">
+                                    <img class="socialIconsImg" src="/Content/Images/linkedin.png" alt="LinkedIn" title="Connect with us on LinkedIn" /></a>
+                            </li>
+                            <li><a href="http://www.twitter.com/ChrisMarquette" target="_blank">
+                                    <img class="socialIconsImg" src="/Content/Images/twitter.png" alt="Twitter" title="Follow me on Twitter" /></a>
+                            </li>
+                            <li><a href="http://www.facebook.com/marquette.nutrition.and.fitness" target="_blank">
+                                    <img class="socialIconsImg" src="/Content/Images/facebook.png" alt="Facebook" title="Like us on Facebook" /></a>
+                            </li>
+                        </ul>*@
+                    <a href="/">
+                        <img id="MNFLogo" class="left" alt="MNF Logo" title="Marquette Nutrition & Fitness" src="/Content/Images/MNFLogo.jpg" />
+                    </a>
+                </div>
+                @*<nav>
+                    <div id="navigation">
+                        <ul id="menu" class="menu" itemprop="breadcrumb">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Specialties", "Index", "Specialties")
+                                <ul class="submenu">
+                                    <li>@Html.ActionLink("Celiac Disease", "Celiac", "Specialties")</li>
+                                    <li>@Html.ActionLink("Food Reactions", "FoodReactions", "Specialties")</li>
+                                    <li>@Html.ActionLink("PCOS", "PCOS", "Specialties")</li>
+                                    <li>@Html.ActionLink("Sports Nutrition", "Sports", "Specialties")</li>
+                                    <li>@Html.ActionLink("Vegetarian Nutrition", "Vegetarian", "Specialties")</li>
+                                    <li>@Html.ActionLink("Weight Management", "Weight", "Specialties")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Services", "Index", "Services")
+                                <ul class="submenu">
+                                    <li id="liPrograms">@Html.ActionLink("Programs", "Programs", "Services")
+                                        <ul class="submenu" id="ProgramMenu">
+                                            <li>@Html.ActionLink("Celiac", "Celiac", "Services")</li>
+                                            <li>@Html.ActionLink("LEAP", "LEAP", "Services")</li>
+                                            <li>@Html.ActionLink("PCOS", "PCOS", "Services")</li>
+                                            <li>@Html.ActionLink("Sports Nutrition", "Sports", "Services")</li>
+                                            <li>@Html.ActionLink("Weight Management", "Weight", "Services")</li>
+                                            <li>@Html.ActionLink("Vegetarian Nutrition", "Vegetarian", "Services")</li>
+                                            <li>@Html.ActionLink("Health & Wellness", "Wellness", "Services")</li>
+                                            <li>@Html.ActionLink("Monthly Membership", "Membership", "Services")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Add Ons","AddOns","Services")</li>
+                                    <li>@Html.ActionLink("FollowUp", "FollowUp", "Services")</li>
+                                    <li>@Html.ActionLink("Events", "Index", "Events")</li>
+                                    <li>@Html.ActionLink("ebooks", "Index", "ebooks")
+                                        <ul class="submenu">
+                                            <li>@Html.ActionLink("Celiac", "Celiac", "ebooks")</li>
+                                            <li>@Html.ActionLink("PCOS", "PCOS", "ebooks")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Seminars", "Seminars", "Services")</li>
+                                    <li>@Html.ActionLink("Supplements", "Supplements", "Services")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Resources", "Index", "Resources")</li>
+                            
+                            <li>@Html.ActionLink("About Us", "Index", "About")
+                                <ul class="submenu">
+                                    <li>@Html.ActionLink("Our Mission", "Index", "About")</li>
+                                    <li>@Html.ActionLink("About Christine", "Chris", "About")</li>
+                                    <li>@Html.ActionLink("Blog", "Blog", "About")</li>
+                                    <li>@Html.ActionLink("FAQ's", "FAQ", "About")</li>
+                                    <li>@Html.ActionLink("Location", "Location", "About")</li>
+                                    <li>@Html.ActionLink("Forms", "Forms", "About")</li>
+                                    $1$<li>@Html.ActionLink("Privacy Policy", "Privacy", "About")</li>#1#
+                                    <li>@Html.ActionLink("Media", "Media", "About")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+                        </ul>
+                    </div>
+                </nav>*@
+            </header>
+            <section id="main">
+                @RenderBody()
+                @ViewData["Exception"]
+            </section>
+            @*<footer>
+                <div id="socialMediaBtmDiv" class="clear">
+                    <ul id="socialIconsBtm">
+                        <li><a href="http://www.linkedin.com/in/christinemarquette"  target="_blank">
+                                <img class="socialIconsImg" src="/Content/Images/linkedin.png" alt="LinkedIn" title="Connect with us on LinkedIn" /></a>
+                        </li>
+                        <li><a href="http://www.twitter.com/ChrisMarquette" target="_blank">
+                                <img class="socialIconsImg" src="/Content/Images/twitter.png" alt="Twitter" title="Follow me on Twitter" /></a>
+                        </li>
+                        <li><a href="http://www.facebook.com/marquette.nutrition.and.fitness" target="_blank">
+                                <img class="socialIconsImg" src="/Content/Images/facebook.png" alt="Facebook" title="Like us on Facebook" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress"> 3421 W William Cannon Drive, Suite 145</span>, 
+                    <span itemprop="addressLocality">Austin</span>, 
+                    <span itemprop="addressRegion">TX</span> 
+                    <span itemprop="postalCode">78745</span>
+                </div>
+                <div itemscope="itemscope" itemtype="http://schema.org/ContactPoint"> &nbsp; ph: 
+                    <span itemprop="telephone"> &#53;&#49;&#50;&#45;&#52;&#54;&#56;&#45;&#52;&#51;&#51;&#56;</span>
+                </div>
+            
+                <!-- Place this tag where you want the +1 button to render 
+                <plusOne></plusOne>-->
+                <div id="plusOne">Recommend this page to your friends by clicking +1</div>
+            </footer>*@
+        </div>
+
+        @ViewData["Exception"]
+        @*Google Analytics Code*@
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-7665960-1");
+                pageTracker._trackPageview();
+            }
+            catch (err) { }
+        </script>
+        @*Google Analytics Code*@
+        <!-- Place this tag in your head or just before your close body tag -->
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <script type="text/javascript">
+            gapi.plusone.render('plusOne', { "size": "medium", "count": "true" });
+        </script>
+    </body>
+</html>

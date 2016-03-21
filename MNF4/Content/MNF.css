@@ -1,0 +1,1256 @@
+﻿/*----------------------------------------------------------
+This is the MNF4.css file written in .less syntax to take 
+    advantage of variables, functions, and other .less features.
+----------------------------------------------------------*/
+html {
+  height: 100%;
+}
+body {
+  font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+  color: #696969;
+  /*behavior:url(csshover3.htc);  for older IE browser support  */
+
+}
+/*
+    Background color gradient testing
+--------------------------------------------------------------    */
+.closed {
+    align-content: center;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+/*
+    height: 600px;
+    width: 751px;
+*/
+    z-index: 100;
+}
+
+#closedText {
+    text-align: justify;
+}
+
+
+#linearBg2 {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  background-position: top;
+  background-color: #006838;
+  /*@bright-green;*/
+
+  background-image: -o-linear-gradient(top, #006838 23%, #8bc63f 62%);
+  background-image: -moz-linear-gradient(top, #006838 23%, #8bc63f 62%);
+  background-image: -webkit-linear-gradient(top, #006838 23%, #8bc63f 62%);
+  background-image: -ms-linear-gradient(top, #006838 23%, #8bc63f 62%);
+  background-image: linear-gradient(#006838 23%, #8bc63f 62%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.23, #006838), color-stop(0.62, #8bc63f));
+  /* IE compatibility attempt */
+
+  zoom: 1;
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='@dark-green', endColorstr='@bright-green')";
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='@dark-green', endColorstr='@bright-green');*/
+
+  -pie-background: linear-gradient(to bottom, #006838, #8bc63f);
+  /*ie 6-9 via PIE*/
+
+  behavior: url(/Content/themes/PIE-1.0.0/PIE.htc);
+}
+a:link {
+  color: #006838;
+  text-decoration: underline;
+}
+a:visited {
+  color: #006838;
+}
+a:hover {
+  color: white !important;
+  background-color: #006838;
+  /* Dark Green  */
+
+}
+p {
+  font-size: 1.0em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+ul {
+  font-size: 1.0em;
+  line-height: 1.6em;
+}
+header,
+footer,
+nav,
+section {
+  display: block;
+}
+/* HEADINGS   
+----------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+}
+h1 {
+  font-size: 2.0em;
+  padding: 0 0 10px 0;
+}
+h2 {
+  font-size: 2.0em;
+  padding: 0 0 10px 0;
+}
+h3 {
+  font-size: 1.7em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1.0em;
+}
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page {
+  height: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  position: relative;
+  color: #000000;
+  padding: 0;
+  z-index: 100;
+}
+header h1 {
+  font-weight: bold;
+  padding: 5px 0;
+  margin: 0;
+  color: #ffffff;
+  border: none;
+  line-height: 2em;
+  text-shadow: 1px 1px 2px #111;
+}
+#main {
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px 30px 15px 30px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  /*border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;*/
+
+  text-align: justify;
+  z-index: 1;
+}
+footer,
+#footer {
+  background-color: #ffffff;
+  color: #999;
+  padding: 10px 0;
+  text-align: center;
+  line-height: normal;
+  margin: 1px 0 30px 0;
+  font-size: .9em;
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+}
+nav {
+  position: relative;
+  display: block;
+  z-index: 100;
+}
+.view-switcher {
+  color: white;
+  font-weight: bold;
+}
+.view-switcher a {
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.view-switcher a:visited {
+  color: white !important;
+  font-weight: bold;
+}
+#banner {
+  width: 100%;
+  margin-bottom: 2em;
+  height: 10em;
+}
+#LayoutTitle {
+  background-position: center;
+  background-color: White;
+  text-align: center;
+  margin-top: 2em;
+  height: 175px;
+  display: block;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+#MNFLogo {
+  margin-left: 15%;
+  border: none;
+  background-color: #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+}
+#bannerHS {
+  float: right;
+  height: 175px;
+  margin-right: 2em;
+}
+#LayoutTitle a {
+  border: none;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+#LayoutTitle a:hover,
+#LayoutTitle a.over {
+  border: none;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+#logindisplay {
+  font-size: 1.1em;
+  display: block;
+  text-align: right;
+  margin: 10px;
+  color: White;
+}
+#logindisplay a:link {
+  color: white;
+  text-decoration: underline;
+}
+#logindisplay a:visited {
+  color: white;
+  text-decoration: underline;
+}
+#logindisplay a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* Menu styles
+---------------------------------------------------------*/
+.ui-menu {
+  width: 200px;
+}
+/*.ui-menu-item { height: 2.0em; line-height: 2.0em; }      doesn't work for ie *$&^'*/
+.ui-menu-item {
+  height: 2.0em;
+  line-height: 0.5em;
+}
+.ui-menubar {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.ui-menubar-item {
+  float: left;
+  display: inline;
+  height: 2.0em;
+  line-height: 2.0em;
+}
+.ui-menubar .ui-button {
+  float: left;
+  font-weight: normal;
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+  margin: 0;
+  outline: none;
+}
+.ui-menubar .ui-menubar-link {
+  border-right: 1px dashed transparent;
+  border-left: 1px dashed transparent;
+}
+.ui-menubar .ui-menu {
+  width: 200px;
+  position: absolute;
+  z-index: 9999;
+  font-weight: normal;
+}
+.submenu {
+  list-style: none;
+}
+/*necessary to fix ie10 bullets showing*//* Social Media Icons
+----------------------------------------------------------*/
+/*  Icons at Top Left of page   */
+.socialLink:link {
+  background-color: transparent;
+  text-decoration: none !important;
+}
+.socialLink:visited {
+  background-color: transparent;
+}
+.socialIconsImg {
+  border: none;
+}
+.socialIconsImg .hover {
+  border: none;
+  text-decoration: none;
+}
+#socialIconsTop {
+  text-align: left;
+  position: absolute;
+  margin-top: 10px;
+  /*  Need this, else icons are too high from content */
+
+  height: 150px;
+  width: 50px;
+  /* don't encroach on the menu width */
+
+  -webkit-padding-start: 10px;
+}
+#socialIconsTop li {
+  list-style: none;
+}
+#socialIconsTop li a {
+  padding: 0 2px;
+  text-decoration: none;
+}
+/*  Icons at bottom (footer) of page    */
+#socialMediaBtmDiv {
+  border: none;
+  background-color: #ffffff;
+}
+ul#socialIconsBtm {
+  border: none;
+  padding: 2px 2px;
+  position: relative;
+  margin: 0;
+}
+ul#socialIconsBtm li {
+  color: #ffffff;
+  /* color of underline */
+
+  display: inline;
+  list-style: none;
+}
+ul#socialIconsBtm li a:link {
+  border: none;
+  color: #ffffff;
+  /* color of underline */
+
+  padding: 0 10px;
+  text-decoration: none;
+}
+ul#socialIconsBtm li .hover {
+  text-decoration: none;
+}
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+fieldset {
+  border: 1px solid #ddd;
+  padding: 0 1.4em 0 1.4em;
+  margin: 0 0 1.5em 0;
+}
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+textarea {
+  min-height: 75px;
+}
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 1.2em;
+  color: #444;
+  width: 200px;
+}
+input[type="email"] {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 1.2em;
+  color: #444;
+  width: 200px;
+}
+select {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 1.2em;
+  color: #444;
+}
+input[type="submit"] {
+  font-size: 1.2em;
+  padding: 5px;
+}
+input[type="reset"] {
+  font-size: 1.2em;
+  padding: 5px;
+}
+/*  Home Page Formatting
+-------------------------------------------------- */
+#indexpage {
+  position: relative;
+  z-index: -1;
+}
+.NewHome h3 {
+  color: red;
+}
+#MNFVideo {
+  position: relative;
+  text-align: center;
+  z-index: -1;
+  /* low z-index to let menus cover it up */
+
+}
+#ytFrame {
+  position: relative;
+  width: 640px;
+  height: 360px;
+  z-index: -1;
+}
+#optInTable {
+  text-align: justify;
+  width: 100%;
+}
+#optInMsg {
+  color: #006838;
+  /*  MNF Dark Green    */
+
+}
+#optInResult {
+  font-style: italic;
+  color: #8bc63f;
+  /*  MNF Bright Green    */
+
+  text-align: left;
+}
+#optInTarget fieldset {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #D6FDD6;
+  /* light shade of pale green    */
+
+  width: 95%;
+}
+#openHouse {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  color: red;
+}
+#TrophyPic {
+  float: right;
+  padding: 4.5em 1em .5em 2em;
+  vertical-align: middle;
+  text-align: center;
+  width: 25%;
+}
+#StrategySessionIntro {
+  font-style: italic;
+}
+#StrategySessionApp {
+  width: 100%;
+  height: 1700px;
+  border: 0;
+}
+#SpecialtiesList {
+  margin-left: 15%;
+}
+#TrailRunningPic {
+  float: left;
+  height: 300px;
+  width: 125px;
+  padding: .5em 1.5em .5em 1.5em;
+}
+#HomePageText {
+  clear: both;
+}
+/* column container */
+.colmask {
+  position: relative;
+  /* This fixes the IE7 overflow hidden glitch */
+
+  clear: both;
+  float: left;
+  width: 100%;
+  /* width of whole page */
+
+  overflow: hidden;
+  /* This chops off any overhanging divs */
+
+}
+/* common column settings */
+.colright,
+.colmid,
+.columnsContainer {
+  float: left;
+  width: 100%;
+  /* width of page */
+
+  position: relative;
+}
+.colCenter,
+.colLeft,
+.colRight {
+  float: left;
+  position: relative;
+  padding: 0 0 1em 0;
+  /* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+
+  overflow: hidden;
+}
+/* 3 Column settings */
+.threecol {
+  background: #f4f4f4;
+  /* right column background colour */
+
+}
+.threecol .colmid {
+  right: 25%;
+  /* width of the right column */
+
+  background: #ffffff;
+  /* center column background colour */
+
+}
+.threecol .columnsContainer {
+  right: 50%;
+  /* width of the middle column */
+
+  background: #f4f4f4;
+  /* left column background colour */
+
+}
+.threecol .colCenter {
+  width: 46%;
+  /* width of center column content (column width minus padding on either side) */
+
+  left: 102%;
+  /* 100% plus left padding of center column */
+
+}
+.threecol .colLeft {
+  width: 21%;
+  /* Width of left column content (column width minus padding on either side) */
+
+  left: 31%;
+  /* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+
+}
+.threecol .colRight {
+  width: 21%;
+  /* Width of right column content (column width minus padding on either side) */
+
+  left: 85%;
+  /* Please make note of the brackets here:
+				(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+
+}
+/* Celiac page - text and image formatting 
+-------------------------------------------------- */
+#villiJpg {
+  float: right;
+  padding: 0 0 .5em 1.5em;
+  width: 300px;
+}
+#CeliacCCthumb {
+  float: right;
+  padding: 0 0 1em 2em;
+  height: 200px;
+  width: 150px;
+}
+/* FoodReactions page - text and formatting
+-------------------------------------------------- */
+#LEAPIntro {
+  font-style: italic;
+}
+#LEAPPrescreenForm {
+  width: 100%;
+  height: 2700px;
+  border: 0;
+}
+#histaminePic {
+  text-align: right;
+  float: right;
+  padding: 0 0 0 1em;
+  vertical-align: text-top;
+  width: 40%;
+}
+/* Sports page - text and image formatting 
+-------------------------------------------------- */
+#bleacherrun {
+  float: right;
+  padding: 0 1em 1em 3em;
+  vertical-align: text-top;
+  width: 30%;
+}
+/* Veggie page - text and image formatting 
+-------------------------------------------------- */
+#frutas {
+  float: left;
+  padding: 0 2em 1em 0;
+  height: 200px;
+  width: 200px;
+}
+/* PCOS page - text and image formatting 
+-------------------------------------------------- */
+#PCOSjpg {
+  float: right;
+  padding: 0 0 0 1.5em;
+}
+/* weightmgt page - dna text and image formatting 
+-------------------------------------------------- */
+#dnaimage {
+  float: left;
+  padding: 0 1em 0 0;
+  vertical-align: text-top;
+  width: 30%;
+}
+/* SERVICES page formatting
+-------------------------------------------------- */
+.LEAPCaseStudy {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+.ui-accordion > .CaseHeading {
+  padding-left: 2em;
+}
+.accordion .CaseDetails {
+  font-size: small;
+  margin: 1em 3em 1em 3em;
+}
+/* Services / Supplements page - text and image formatting 
+-------------------------------------------------- */
+#frustratedGuy {
+  float: right;
+  padding: 0 0 0 1.5em;
+  height: 150px;
+  width: 150px;
+}
+#confusedGuy {
+  float: right;
+  padding: 0 0 0 1.5em;
+  height: 175px;
+  width: 125px;
+}
+#nutrametrixLink {
+  float: left;
+  width: 80%;
+}
+#nutraDiv {
+  /*border: 1pt solid black;*/
+
+  padding-left: 5px;
+  text-align: center;
+}
+/* Events Page Formatting
+--------------------------------------------------------- */
+#EventFormPage #Name,
+#Description,
+#Location {
+  width: 30em;
+}
+#event {
+  /*font-weight: bold;*/
+
+  font-size: 12pt;
+  color: Black;
+}
+#event em {
+  color: Red;
+}
+#event b {
+  font-weight: bolder;
+}
+#event #specifics {
+  font-weight: bolder;
+  margin-left: 3em;
+  list-style: none;
+}
+.accordion #eventTitle {
+  color: white;
+  background-color: white;
+}
+.accordion #eventMarkup {
+  color: black;
+  background-color: transparent;
+  padding-bottom: 5em;
+}
+#eventMarkup a:link {
+  color: #006838;
+  text-decoration: underline;
+}
+#eventMarkup a:visited {
+  color: #006838;
+}
+#eventMarkup a:hover {
+  color: white !important;
+  background-color: #006838;
+}
+#eventTitle {
+  font-size: 14pt;
+  font-weight: bolder;
+  color: #006838;
+  /*Dark Green  */
+}
+#holidayChallenge {
+  color: orangered;
+}
+/*  For creating/editing events on form page    */
+.ui-timepicker-div .ui-widget-header {
+  margin-bottom: 8px;
+}
+.ui-timepicker-div dl {
+  text-align: left;
+}
+.ui-timepicker-div dl dt {
+  height: 25px;
+  margin-bottom: -25px;
+}
+.ui-timepicker-div dl dd {
+  margin: 0 10px 10px 65px;
+}
+.ui-timepicker-div td {
+  font-size: 90%;
+}
+.ui-tpicker-grid-label {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.ui-timepicker-rtl {
+  direction: rtl;
+}
+.ui-timepicker-rtl dl {
+  text-align: right;
+}
+.ui-timepicker-rtl dl dd {
+  margin: 0 65px 10px 10px;
+}
+/* /ebooks pages - text and image formatting 
+-------------------------------------------------- */
+#PCOSebooks {
+  border: none;
+  float: left;
+  padding: 0 2em 1em 3em;
+  height: 435px;
+  width: 300px;
+}
+.ebookPic {
+  border: none;
+  float: left;
+  padding: 0 2em 1em 0;
+  height: 300px;
+  width: 435px;
+}
+.ebookDescription {
+  margin-left: 450px;
+}
+#PayPalButton {
+  margin-top: 2em;
+}
+#CeliacBootcampPic {
+  padding: 0 1.5em 1em 3em;
+  height: 435px;
+  width: 300px;
+}
+#CeliacBCDescription {
+  margin-left: 400px;
+}
+/* Monthly Membership Page
+--------------------------------------------------------*/
+#membership {
+  margin-left: 2em;
+  border: silver thin solid;
+  color: black;
+  width: 60%;
+}
+#membership tr {
+  line-height: 1.5em;
+}
+#membership .mbrService {
+  padding-left: 5px;
+}
+#membership .mbrStandard {
+  text-align: center;
+}
+#membership .mbrPremium {
+  text-align: center;
+}
+#membership th {
+  background-color: silver;
+}
+/* Resources Page Icons
+---------------------------------------------------------*/
+#resourceTable {
+  width: 90%;
+}
+.ResourceGroup {
+  border: 1px black solid;
+  padding: 1em;
+  margin: 1em;
+}
+.Resources p {
+  text-align: left;
+}
+.ResourceIcon {
+  float: left;
+  padding: 1em 1em 1em 0;
+  vertical-align: bottom;
+}
+.ResourceHeading {
+  padding: 0 0 1em 0;
+  vertical-align: top;
+  text-align: left;
+}
+/* FAQ page - text and image formatting 
+-------------------------------------------------- */
+#faqTable {
+  width: 80%;
+}
+.faqsummaryq {
+  font-style: italic;
+  line-height: 1.2;
+}
+#faqImage {
+  padding-top: 2em;
+  height: 350px;
+  width: 460px;
+  margin-left: 10%;
+  /*position: relative;*/
+
+}
+/*
+    About pages
+-------------------------------------------------------- */
+/*  Chris' About page, social media link
+-------------------------------------------------------- */
+#chrisimage {
+  float: right;
+  margin-top: 2em;
+  padding: 1em 0 1em 2em;
+}
+#socialMediaTable {
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 80%;
+}
+#socialMediaHeader {
+  background-color: #e8eef4;
+  line-height: 1em;
+  text-align: center;
+}
+#socialMediaWidgets {
+  vertical-align: top;
+}
+#socialMediaFooter {
+  text-align: center;
+}
+#feed-control {
+  text-align: center;
+  font-size: 11px;
+  padding: 1em;
+  width: 350px;
+}
+#twitter-feed {
+  vertical-align: top;
+  text-align: right;
+}
+/*  Blog page formatting
+-------------------------------------------------------- */
+#blogContent {
+  width: 70%;
+}
+#postTitle {
+  margin-top: 2.0em;
+  font-size: 1.5em;
+  color: #006838;
+}
+#postLink {
+  color: #006838;
+}
+#postContent div {
+  font-size: 12pt;
+}
+#postContent a {
+  color: #006838;
+}
+/*  Location page, google map, etc.
+-------------------------------------------------------- */
+#locationMap {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+#locationDirections {
+  margin-left: 50%;
+  padding: 0 0 1em 1em;
+}
+#map_canvas {
+  float: left;
+  height: 425px;
+  margin-top: 2em;
+  padding: 0 0 1em 0;
+  width: 95%;
+}
+/*  Media page
+------------------------------------------------------ */
+#YouTubePromo {
+  color: Red;
+  font-style: italic;
+}
+#audioplayer {
+  height: auto;
+  width: auto;
+  visibility: visible;
+}
+#MOFOplayer {
+  height: auto;
+  width: auto;
+  visibility: hidden;
+}
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+  color: #ff0000;
+}
+.field-validation-valid {
+  display: none;
+}
+.input-validation-error {
+  border: 1px solid #ff0000;
+  background-color: #ffeeee;
+}
+.validation-summary-errors {
+  font-weight: bold;
+  color: #ff0000;
+}
+.validation-summary-valid {
+  display: none;
+}
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label {
+  margin: 1em 0 0 0;
+  font-weight: bolder;
+}
+.display-field,
+.editor-field {
+  margin: 0.5em 0 0 0;
+}
+.text-box {
+  width: 30em;
+}
+.text-box.multi-line {
+  height: 6.5em;
+}
+.tri-state {
+  width: 6em;
+}
+/* WEBINARS page formatting  
+----------------------------------------------------------*/
+#webinar {
+  /*font-weight: bold;*/
+
+  font-size: 12pt;
+  color: Black;
+}
+#webinar em {
+  color: Red;
+}
+#webinar b {
+  font-weight: bolder;
+}
+#attn {
+  /*color: #8CC63F;  MNF Light Green */
+
+  color: #006838;
+  /*  MNF Dark Green  */
+
+  border: thin solid #8CC63F;
+  padding: 5px;
+}
+#specifics {
+  margin-left: 3em;
+  list-style: none;
+}
+#webinar #components {
+  margin-left: 5em;
+}
+#components h4 {
+  color: Maroon;
+}
+#paymentbox {
+  border-style: solid;
+  border-width: thin;
+  border-color: Black;
+  padding: 1em;
+  margin-left: -5em;
+}
+#earlybird {
+  color: Red;
+  font-size: 16pt;
+  font-weight: bolder;
+  text-align: center;
+}
+.packagediscount {
+  color: Blue;
+  font-size: 16pt;
+  font-weight: bolder;
+  text-align: center;
+}
+.couponcode {
+  color: Green;
+  font-size: 16pt;
+  font-weight: bolder;
+  text-align: center;
+}
+.testimonial {
+  margin: 2em 0 2em 0;
+  font-weight: bolder;
+  font-style: italic;
+}
+.paymentoptions {
+  text-align: center;
+  /*  works for ie */
+
+  margin-left: auto;
+  /*  attempt for Chrome & mozilla */
+
+  margin-right: auto;
+  width: 90%;
+  /*  seems to work for the little table  */
+
+}
+.paymentplan {
+  font-weight: bolder;
+  text-align: center;
+  /*  works for ie */
+
+  margin-left: auto;
+  /*  attempt for Chrome & mozilla */
+
+  margin-right: auto;
+  width: 90%;
+  /*  seems to work for the little table  */
+
+}
+.paymentoptions table tr {
+  font-weight: bolder;
+}
+#programsteps li {
+  padding-bottom: 1em;
+}
+#aboutChristine {
+  margin: 2em 2em 0 3em;
+}
+/* CLASS page formatting  - some elements borrow from webinar
+----------------------------------------------------------*/
+#class {
+  font-size: 12pt;
+  color: Black;
+}
+#class em {
+  color: Red;
+}
+#class b {
+  font-weight: bolder;
+}
+#class #components {
+  margin-left: 5em;
+}
+#regprice {
+  font-size: 16pt;
+  font-weight: bolder;
+  text-align: center;
+}
+/* Promo Code Pages Formatting
+--------------------------------------------------------- */
+#PromoFormPage #Name,
+#Description,
+#Document {
+  width: 30em;
+}
+#PromoFormPage textarea {
+  width: 30em;
+}
+#PromoFormPage #Document {
+  width: 20em;
+}
+input[type='file'] {
+  height: 28px;
+  width: 30em;
+}
+/* SSL Seal Formatting
+--------------------------------------------------------- */
+#sslCert {
+  clear: both;
+  margin-top: 3em;
+  text-align: center;
+}
+/* Administrative Tools Form  
+----------------------------------------------------------*/
+#tools {
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+#tools table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 90%;
+}
+#tools table td {
+  text-align: center;
+}
+/* Events Pages 
+----------------------------------------------------------*/
+#eventListGrid th {
+  padding: 5px;
+}
+#eventListGrid td {
+  padding: 5px;
+}
+/* MISC  
+----------------------------------------------------------*/
+#noSpam {
+  font-size: smaller;
+  font-style: italic;
+}
+#plusOne {
+  text-align: center;
+  margin-top: 2em;
+}
+.botCheck {
+  position: absolute;
+  margin-left: -5000px;
+}
+#QRContact {
+  border-width: thin;
+  border-style: solid;
+}
+.leftcolumn {
+  float: left;
+  width: 50%;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: auto;
+}
+.rightcolumn {
+  margin-left: 50%;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  bottom: auto;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.clear {
+  clear: both;
+}
+.error {
+  color: Red;
+}
+.bold {
+  font-weight: bold;
+}
+#showContactList {
+  display: block;
+}
+.altGridRow {
+  /*background-color: #8CC63F;*/
+
+  background-color: #f9f0fb;
+  /* light lavender */
+
+}
+/*  Print Settings
+-------------------------------------- */
+@media Print {
+  nav,
+  footer {
+    display: none;
+  }
+  #logindisplay {
+    display: none;
+  }
+  .noPrint {
+    display: none;
+  }
+}
+/********************
+*   Mobile Styles   *
+********************/
+@media only screen and (max-width: 850px) {
+  /* Basic Formatting  
+      ----------------------------------------------------------*/
+  .center {
+    text-align: center;
+  }
+  .left {
+    text-align: left;
+  }
+  .clear {
+    clear: both;
+  }
+  .error {
+    color: Red;
+  }
+  #LayoutTitle {
+    background-position: center;
+    background-color: White;
+    margin-top: 2em;
+    margin-left: 30%;
+    width: 40%;
+    display: block;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+  }
+  #LayoutTitle a {
+    background-color: #ffffff;
+  }
+  #MNFLogo {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+  }
+  /* header  
+      ----------------------------------------------------------*/
+  header .float-left,
+  header .float-right {
+    float: none;
+  }
+  /* logo */
+  header .site-title {
+    margin: 10px;
+    text-align: center;
+  }
+}

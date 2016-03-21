@@ -1,0 +1,70 @@
+﻿@model MNF4.ViewModels.PromoFormViewModel
+
+<div id="PromoFormPage">
+    <fieldset>
+        <legend>PromoCode Details for @Model.Name</legend>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Code)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Code)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Description)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Description)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Message)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Message)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Document)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Document)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.StartDate)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.StartDate)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.EndDate)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.EndDate)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Active)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Active)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Markup)
+        </div>
+        <div class="display-field">
+            @Html.Raw(Model.Markup)
+        </div>
+    </fieldset>
+</div>

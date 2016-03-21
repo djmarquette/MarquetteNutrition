@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MNF4.ViewModels.ContactListViewModel>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ExportToExcel</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email Address</th>
+            <th>Source</th>
+            <th>Submit Date</th>
+            <th>Opt In?</th>
+            <th>Contacted?</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.contact.FirstName  @item.contact.LastName</td>
+                <td>@item.contact.Phone</td>
+                <td>@item.contact.EmailAddress</td>
+                <td>@item.source.Name</td>
+                <td>@item.contact.SubmitDate</td>
+                <td>@item.contact.optIn</td>
+                <td>@item.contact.Contacted</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

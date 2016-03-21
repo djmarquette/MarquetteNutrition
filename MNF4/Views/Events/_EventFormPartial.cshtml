@@ -1,0 +1,105 @@
+﻿@model MNF4.ViewModels.EventFormViewModel
+
+<div id="EventFormPage">
+    
+    @Scripts.Render("~/bundles/timepicker")
+    <script type="text/javascript">
+        $(function () { $("#EventDate").datepicker({numberOfMonths: 3,dateFormat: 'm/d/yy',showButtonPanel: true }); })
+    </script>
+    <script type="text/javascript">
+        $(function () { $("#StartTime").timepicker({ stepMinute:15, minuteGrid:15, timeFormat:'h:mm tt'});})
+    </script>
+    <script type="text/javascript">
+        $(function () { $("#EndTime").timepicker({ stepMinute:15, minuteGrid:15, timeFormat:'h:mm tt'});})
+    </script>
+    <script type="text/javascript">
+        $(function () { $("#Cost").maskMoney({ symbol: '$ ', symbolStay: true }); })
+    </script>
+    <script type="text/javascript" src="/Scripts/tinymce/tiny_mce.js"></script>
+    <script type="text/javascript">
+        tinyMCE.init({theme: "advanced", mode: "textareas", height: "480", width: "100%"});
+    </script>
+
+
+    @Html.HiddenFor(model => model.ID)
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.EventTypeID)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.EventTypeID, new SelectList(Model.EventTypes, "ID", "Name"), "-- Select Event Type --")
+        @Html.ValidationMessageFor(model => model.EventTypeID)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Cost)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Cost)
+        @Html.ValidationMessageFor(model => model.Cost)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Description)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Description)
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.EventDate)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.EventDate)
+        @Html.ValidationMessageFor(model => model.EventDate)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.StartTime)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.StartTime)
+        @Html.ValidationMessageFor(model => model.StartTime)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.EndTime)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.EndTime)
+        @Html.ValidationMessageFor(model => model.EndTime)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Location)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Location)
+        @Html.ValidationMessageFor(model => model.Location)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ShowEvent)
+    </div>
+    <div class="editor-field">
+        @Html.CheckBoxFor(model => model.ShowEvent)
+        @Html.ValidationMessageFor(model => model.ShowEvent)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.EventMarkup)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.EventMarkup)
+        @Html.ValidationMessageFor(model => model.EventMarkup)
+    </div>
+</div>

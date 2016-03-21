@@ -1,0 +1,36 @@
+﻿@using Recaptcha;
+@model MNF4.ViewModels.ContactFormViewModel
+@{
+    ViewBag.Title = "Contact Us";
+    ViewBag.Description = @"Use this Contact page to ask a question, schedule an appointment, or request more 
+    information about your diet and nutrition options.";
+}
+<div itemscope="itemscope" itemtype="http://schema.org/ContactPage">
+    <h1>Contact Us</h1>
+    <div data-role="content">
+        <h5>On your phone? &nbsp;Use the "Call" button above to reach us quickly!</h5>
+        <p>
+            Use this form to ask a question of our registered dietitian, schedule an appointment,
+            or request more information about your diet and nutrition options. (* denotes required
+            field)
+        </p>
+        <h5>
+            @Html.Partial("_NoNewClientsPartial")
+        </h5>
+
+ @using (Html.BeginForm("MobileSubmit", "Contact", null, FormMethod.Post, new { data_ajax = "false" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <legend />
+                @Html.Partial("_ContactFormPartial")
+
+                <br />
+                <input type="submit" value="Submit" />
+                &nbsp; 
+                <input type="reset" value="Reset" />
+            </fieldset>
+        }
+    </div>
+</div>

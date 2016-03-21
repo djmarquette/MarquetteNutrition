@@ -1,0 +1,56 @@
+﻿@model MNF4.ViewModels.OptInViewModel
+           
+<div id="optInTarget">
+     <h5 id="optInMsg">@Model.oiMessage</h5>
+     <h5 id="optInResult">@Model.oiResult</h5>
+
+    @using (Ajax.BeginForm("OptIn", new AjaxOptions
+        {
+            HttpMethod = "GET",
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "optInTarget",
+        }))
+    {
+        <fieldset>
+            <legend></legend>
+            <table id="optInTable">
+                <tr class="editor-label">
+                    <td>
+                        @Html.LabelFor(model => model.FirstName)
+                    </td>
+                    <td>
+                        @Html.LabelFor(model => model.LastName)
+                    </td>
+                    <td>
+                        @Html.LabelFor(model => model.EmailAddress)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="editor-field">
+                    <td>
+                        @Html.TextBoxFor(model => model.FirstName, new {required="required", autofocus="autofocus", placeholder="First Name"})<br />
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(model => model.LastName, new {required="required", placeholder="Last Name"})<br />
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(model => model.EmailAddress, new{type="email", placeholder="Email Address"})<br />
+                    </td>
+                    <td>
+                        <input type="submit" value="Submit" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <div id="noSpam">No Spam Promise: We will never share your information!</div>
+                        @Html.ValidationSummary("Please correct the following errors and try again")
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            <input class="botCheck" type="text" value="" />
+        </fieldset>
+        @ViewData["Exception"]
+    }
+</div>

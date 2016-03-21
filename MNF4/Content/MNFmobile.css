@@ -1,0 +1,1257 @@
+/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body {
+    /*background-color: #8CC63F;
+    font-size: .85em;*/
+    background-color: #ffffff;  /* Pure white   */
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+    behavior:url(csshover.htc); /* for older IE browser support  */
+}
+
+.closed {
+    align-content: center;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+/*
+    height: 600px;
+    width: 751px;
+*/
+    z-index: 100;
+}
+
+#closedText {
+    text-align: justify;
+}
+
+a:link {
+        /*color: white;*/
+    color: #006838 !important;
+    text-decoration: underline  !important;
+}
+
+a:visited {
+    color: #006838 !important;/**/
+    text-decoration: underline !important;
+}
+
+p, ul 
+{
+    font-size: 1.0em;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    text-align: left;
+}
+
+h1 
+{
+    color: #006838;    
+    text-align: center;
+    font-size: 2.2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 
+{
+    font-size: 2.0em;
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5, h6 {
+    font-size: 1.2em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header, #header {
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+
+#btnCallUs
+{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#btnCallUs ui-btn-inner 
+{
+    font-size: 14px;    /* jquery mobile setting ui-btn-inner font-size at 12.5px - not right setting to override */
+}
+
+header h1, #header h1 {
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    text-shadow: 1px 1px 2px #111;
+}
+
+#main {
+    background-color: #fff;
+    padding: 30px 30px 15px 30px;
+    border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;
+    text-align: justify;
+}
+
+footer, 
+#footer {
+    background-color: #fff;
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0 0 30px 0;
+    font-size: .9em;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+}
+
+nav 
+{
+    display: block;
+}
+
+#navigation 
+{
+    margin-top: 3em;
+}
+
+.view-switcher 
+{
+    color: white;
+    font-weight: bold;
+}
+.view-switcher a 
+{
+    color: white;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.view-switcher a:visited 
+{
+    color: white !important;
+    font-weight: bold;
+}
+ 
+/* TAB MENU   
+----------------------------------------------------------*/
+#menu 
+{
+    clear: both;
+    margin-top: 20em;
+}
+
+ul#menu 
+{
+    position: relative;
+    margin: 0;
+    text-align: right;
+}
+
+ul#menu li {
+    display: inline;
+    line-height: 1.0em;
+    list-style: none;
+    position: relative;
+}
+
+/*
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+*/
+
+ul#menu li a 
+{
+    font-weight: bold;
+    font-size: 14pt;
+    color: #006838;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 0 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+input[type="reset"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+/* Social Media Icons
+----------------------------------------------------------*/
+/*  Icons at Top Left of page   */
+ul#socialIconsTop
+{
+    padding: 7px 2px;
+    position: relative;
+    margin: 0;
+    width: 175px;   /* don't encroach on the menu width */
+}
+
+ul#socialIconsTop li
+{
+    display: inline;
+    float: left;
+    list-style: none;
+}
+
+ul#socialIconsTop li a
+{
+    color: #8CC63F;              /* color of underline - need for IE */
+    background-color: #8CC63F;      /*  need for IE as well  */
+    border: none;
+    padding: 0px 3px;
+    text-decoration: none;
+}
+
+
+/*  Icons at bottom (footer) of page    */
+ul#socialIconsBtm
+{
+    padding: 2px 2px;
+    position: relative;
+    margin: 0;
+}
+
+ul#socialIconsBtm li
+{
+    display: inline;
+    list-style: none;
+}
+
+ul#socialIconsBtm li a
+{
+    color: #fff;                /* color of underline */
+    background-color: #fff;     /*   white */
+    border: none;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+
+/*  Home Page Formatting
+-------------------------------------------------- */
+.NewHome h3 
+{
+    color: red;
+}
+
+#MNFVideo 
+{
+    text-align: center;
+}
+
+#MNFVideo iframe
+{
+    border: 0;
+    width:  320px;
+    height: 180px;
+}
+
+#openHouse 
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+#HomeIntro 
+{
+    
+}
+#TrophyPic 
+{
+    float: right;
+    padding: 4.5em 1em .5em 2em;
+    vertical-align: middle;
+    text-align: center;
+    width: 25%;
+}
+
+#RunningTrophy 
+{
+}
+
+#HomeBody           /*  style="float: right; width: 80%" */
+{
+    
+}
+
+#StrategySessionIntro
+{
+    font-style: italic;
+}
+
+#StrategySessionApp
+{
+    width: 100%;
+    height: 2100px;
+    border: 0;
+}
+
+.SpecialtiesList
+{
+    list-style-type: none;
+}
+
+
+/*#SpecialtiesList ul li a input[type="button"]*/
+#SpecListBtn
+{
+    /*color: white;
+    background-color: #006838;
+    text-decoration: none;*/
+	/*background: #8cc63f {global-active-background-color}*/;
+	font-weight: bold;
+	color: black !important/*{global-active-color}*/;
+	cursor: pointer;
+	text-shadow: 0 /*{global-active-shadow-x}*/ 1px /*{global-active-shadow-y}*/ 1px /*{global-active-shadow-radius}*/ #444444 /*{global-active-shadow-color}*/;
+	text-decoration: none !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #9ad945 /*{global-active-background-start}*/), to( #7eb238 /*{global-active-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #9ad945 /*{global-active-background-start}*/, #7eb238 /*{global-active-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #9ad945 /*{global-active-background-start}*/, #7eb238 /*{global-active-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #9ad945 /*{global-active-background-start}*/, #7eb238 /*{global-active-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #9ad945 /*{global-active-background-start}*/, #7eb238 /*{global-active-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #9ad945 /*{global-active-background-start}*/, #7eb238 /*{global-active-background-end}*/);
+}
+
+#SpecialtiesList a:link 
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#FoodReactionsList 
+{
+}
+
+#TrailRunning       /* DIV -  style="float:left; padding-left: 20px; padding-top: 1.5em;"*/
+{
+    /*clear: right;
+    width: 15%;*/
+}
+
+#TrailRunningPic 
+{
+    float: left;
+    height: 300px;
+    width:  125px;
+    padding: .5em 1.5em .5em 1.5em;
+    
+}
+
+/* Celiac page - text and image formatting 
+-------------------------------------------------- */
+#celiacIntro
+{
+}
+#villiJpg
+{
+        width:  300px;
+}
+
+/* FoodReactions page - text and formatting
+-------------------------------------------------- */
+#LEAPIntro
+{
+    font-style: italic;
+}
+
+#LEAPPrescreenForm
+{
+    width: 100%;
+    height: 2700px;
+    border: 0;
+}
+#histaminePic
+{
+    /*text-align: right;
+    float: right;
+    padding: 0em 0em 0em 1em;
+    vertical-align: text-top;*/
+    width: 40%;
+}
+
+/* Sports page - text and image formatting 
+-------------------------------------------------- */
+#athleteText
+{
+    
+}
+#bleacherrun
+{
+    /*float: right;
+    padding: 0 1em 1em 3em;
+    vertical-align: text-top;*/
+    margin-left: 20%;
+    width: 30%;
+}
+/* Veggie page - text and image formatting 
+-------------------------------------------------- */
+#veggiedefs
+{
+}
+#frutas
+{
+    /*float: left;
+    padding: 0em 5px 5px 0;*/
+    margin-left: 5em;
+    height: 200px;
+    width: 200px;
+}
+
+
+
+/* PCOS page - text and image formatting 
+-------------------------------------------------- */
+#PCOSIntro
+{
+
+}
+#PCOSjpg
+{
+    padding-bottom: 5px;
+    /*float: right;
+        padding: 0 0 0 1.5em;*/
+}
+
+/* weightmgt page - dna text and image formatting 
+-------------------------------------------------- */
+#dnatext
+{
+}
+#dnaimage
+{
+    /*float: left;
+    padding: 0 1em 0em 0em;
+    vertical-align: text-top;*/
+    margin-left: 20%;
+    width: 30%;
+}
+
+/* Services / Supplements page - text and image formatting 
+-------------------------------------------------- */
+#frustratedGuy 
+{
+    float: right;
+    padding: 0 0 0 1.5em;
+    height: 150px;
+    width: 150px;
+}
+
+#confusedGuy 
+{
+    float: right;
+    padding: 0 0 0 1.5em;
+    height: 175px;
+    width: 125px;
+}
+
+a#nutraLogo{
+ width: 238px;
+ height: 47px;
+ background: url('/images/usa/nutraMetrix/logo-nutrametrix.png') no-repeat 0 0;
+ text-indent: -9999em;
+}
+
+a#nutraLogo:hover{
+ background-position: 0 -47px;
+}
+
+#nutrametrixLink
+{
+    float: left;
+    width: 80%;
+}
+#nutraDiv
+{
+    /*border: 1pt solid black;*/
+    padding-left: 5px;
+    text-align: center;
+}
+
+/* /ebooks pages - text and image formatting 
+-------------------------------------------------- */
+#PCOSebooks
+{
+    border: none;
+    /*padding: 0em 2em 1em 3em;*/
+    height: 435px;
+    width:  300px;
+}
+
+.ebookPic
+{
+    border: none;
+    /*padding: 0em 2em 1em 0em;*/
+    height: 300px;
+    width:  435px;
+    /*height: 240px;    - just in case above doesn't look good on phones
+    width:  350px;*/
+}
+
+.ebookDescription 
+{
+    /*margin-left: 450px;*/
+}
+
+.PPbutton
+{
+    border: 0;
+    background-color: #ff4500 !important;
+    font-family: Verdana;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#CeliacBootcampPic 
+{
+    /*padding: 0em 1.5em 1em 3em;*/
+    height: 435px;
+    width:  300px;
+}
+#CeliacBCDescription 
+{
+    /*margin-left: 400px;*/
+}
+
+
+/* Monthly Membership Page
+--------------------------------------------------------*/
+#membership 
+{
+    margin-left: 2em;
+    border: silver thin solid;
+    color: black;
+    width: 60%;
+}
+
+#membership tr {
+    line-height: 1.5em;
+}
+
+#membership .mbrService 
+{
+    padding-left: 5px;
+}
+
+#membership .mbrStandard 
+{
+    text-align: center;
+}
+
+#membership .mbrPremium
+{
+    text-align: center;    
+}
+
+#membership th 
+{
+    background-color: silver;
+}
+
+/* Resources Page Icons
+---------------------------------------------------------*/
+.ResourceGroup 
+{
+    border: 1px black solid;
+    padding: 1em;
+    margin: 1em;
+}
+
+.Resources table
+{
+    width: 100%;
+}
+
+.Resources p 
+{
+    text-align: left;
+}
+
+.ResourceIcon
+{
+    float: left;
+    padding: 1em 1em 1em 0;
+    vertical-align: bottom;
+}
+
+.ResourceHeading 
+{
+    padding: 0 0 1em 0;
+    vertical-align: top;
+    text-align: left;
+}
+
+/* FAQ page - text and image formatting 
+-------------------------------------------------- */
+.faqsummaryq
+{
+    font-style: italic;
+    line-height: 1.2;
+}
+#faqImage
+{
+    /*padding-top: 2em;*/
+    height: 350px;
+    width: 460px;
+}
+
+
+/*  Chris' About page, social media link
+-------------------------------------------------------- */
+#chrisbiodiv
+{
+}
+
+#chrisimagediv
+{
+    text-align: center;
+}
+
+#chrisimage
+{
+        padding-bottom: 5px;
+}
+
+
+#socialMediaWidgets 
+{
+    vertical-align: top;
+} 
+
+#socialMediaFooter 
+{
+    text-align: center;
+}  
+
+#feed-control
+{
+    /*font-size:  11px;
+    padding:    1em;*/
+    width:      350px;
+}
+#twitter-feed
+{
+    vertical-align: top;
+    text-align: right;
+    /*width: auto;*/
+}
+.twtr-timeline 
+{
+}
+
+/*  Location page, google map, etc.
+-------------------------------------------------------- */
+#locationMap 
+{
+}
+
+#locationDirections 
+{
+    /*margin-left: 55%;*/
+}
+
+#map_canvas
+{
+    height: 425px;
+    /*width: 40%;*/
+}
+
+/*
+    Media page
+------------------------------------------------------ */
+#YouTubePromo
+{
+    color: Red;
+    font-style: italic;
+}
+
+#audioplayer
+{
+    height: auto;
+    width:  auto;
+    visibility: visible;
+}
+
+#MOFOplayer
+{
+    height: auto;
+    width:  auto;
+    visibility: hidden;
+}
+
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+    font-weight: bolder;
+}
+
+.display-field, 
+.editor-field {
+    margin: 0 0 0 0;
+}
+
+.text-box {
+    width: 30em;
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+/* WEBINARS page formatting  
+----------------------------------------------------------*/
+#webinar
+{
+    /*font-weight: bold;*/
+    font-size: 12pt;
+    color: Black;
+}
+#webinar em
+{
+    color: Red;
+}
+#webinar b
+{
+    font-weight: bolder;
+}
+#attn
+{
+    /*color: #8CC63F;  MNF Light Green */
+    color: #006838; /*  MNF Dark Green  */
+    border: thin solid #8CC63F;
+    padding: 5px;
+}
+#specifics
+{
+    margin-left: 3em;
+    list-style: none;
+}
+#webinar #components
+{
+    margin-left: 5em;
+}
+#components h4
+{
+    color: Maroon;
+}
+#paymentbox
+{
+    border-style: solid; 
+    border-width: thin; 
+    border-color: Black; 
+    padding: 1em; 
+    margin-left: -5em; 
+}
+#earlybird
+{
+    color: Red;
+    font-size: 16pt;
+    font-weight: bolder;
+    text-align: center;
+}
+.packagediscount
+{
+    color: Blue;
+    font-size: 16pt;
+    font-weight: bolder;
+    text-align: center;
+}
+.couponcode
+{
+    color: Green;
+    font-size: 16pt;
+    font-weight: bolder;
+    text-align: center;
+}
+.testimonial
+{
+    margin: 2em 0 2em 0;
+    font-weight: bolder;
+    font-style: italic;
+}
+.paymentoptions
+{
+    text-align: center; /*  works for ie */
+    margin-left:auto;   /*  attempt for Chrome & mozilla */
+    margin-right:auto;
+    width: 90%;         /*  seems to work for the little table  */
+}
+.paymentplan
+{
+    font-weight: bolder;
+    text-align: center; /*  works for ie */
+    margin-left:auto;   /*  attempt for Chrome & mozilla */
+    margin-right:auto;
+    width: 90%;         /*  seems to work for the little table  */
+}
+
+.paymentoptions table tr
+{
+    font-weight: bolder;
+}
+#programsteps li
+{
+    padding-bottom: 1em;
+}
+#aboutChristine
+{
+    margin: 2em 2em 0 3em;
+}
+
+/* CLASS page formatting  - some elements borrow from webinar
+----------------------------------------------------------*/
+#class
+{
+    font-size: 12pt;
+    color: Black;
+}
+#class em
+{
+    color: Red;
+}
+#class b
+{
+    font-weight: bolder;
+}
+
+#class #components
+{
+    margin-left: 5em;
+}
+
+#regprice
+{
+    font-size: 16pt;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+/* Events Page Formatting
+--------------------------------------------------------- */
+#event
+{
+    /*font-weight: bold;*/
+    font-size: 12pt;
+    color: Black;
+}
+#event em
+{
+    color: Red;
+}
+#event b
+{
+    font-weight: bolder;
+}
+#event #specifics
+{
+    font-weight: bolder;
+    margin-left: 3em;
+    list-style: none;
+}
+
+
+#eventTitle
+{
+    color: #006838;  /*Dark Green  */   
+}
+
+#holidayChallenge
+{
+    color: orangered;   
+}
+
+/*  Opt-In box formatting
+--------------------------------------------------------- */
+#optInTable
+{
+    text-align: justify;
+    width: 100%;
+}
+#optInMsg
+{
+    color: #006838;     /*  MNF Dark Green    */
+    text-align: left;
+}
+#optInResult
+{
+    font-style: italic;
+    color: #8CC63F;     /*  MNF Bright Green    */
+    text-align: left;
+}
+#optInTarget fieldset
+{
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #D6FDD6;  /* light shade of pale green    */
+    text-align: center;
+    width: 100%;
+}
+.optInFirstName 
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* SSL Seal Formatting
+--------------------------------------------------------- */
+#sslCert
+{
+    clear: both;
+    margin-top: 3em;
+    text-align: center;
+}
+
+/* Administrative Tools Form  
+----------------------------------------------------------*/
+#tools
+{
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+#tools table
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    width: 90%;
+}
+#tools table td
+{
+    text-align: center;
+}
+
+
+/* MISC  
+----------------------------------------------------------*/
+#noSpam
+{
+    font-size: smaller;
+    font-style: italic;
+}
+
+#plusOne
+{
+    text-align: center;
+    margin-top: 2em;
+}
+#MNFLogo
+{
+    border: none;
+    background-color: #fff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.botCheck
+{
+    position:absolute;
+    margin-left:-5000px;
+}
+
+#QRContact
+{
+    border-width: thin;
+    border-style: solid;
+}
+.leftcolumn
+{
+        float:left;
+        width: 50%;
+        vertical-align: middle;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        bottom: auto;
+}
+.rightcolumn
+{
+        /*float: right;
+        width: 45%;*/
+    margin-left: 50%;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        bottom: auto;
+}
+.center
+{
+    text-align: center;
+}
+
+.left
+{
+    text-align: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+.bold 
+{
+    font-weight: bold;
+}
+
+#LayoutTitle 
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    width: 90%;
+}
+
+#LayoutTitle a 
+{
+    background-color: #fff;
+}
+
+#logindisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    color: White;
+}
+
+#logindisplay a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#showContactList
+{
+    display: block;
+}
+.dkPurple
+{
+    color: #68228B;
+}
+.altGridRow
+{
+    /*background-color: #8CC63F;*/
+    background-color: #f9f0fb;  /* light lavender */
+}
+
+/*  Print Settings
+-------------------------------------- */
+@media Print
+{
+    nav, footer { display: none; }
+    #logindisplay { display: none; }
+    .noPrint { display: none; }
+}
+
+/********************
+*   Mobile Styles   *
+********************/
+@media only screen and (max-width: 850px) 
+{
+    /* Basic Formatting  
+    ----------------------------------------------------------*/
+    .center
+    {
+        text-align: center;
+    }
+
+    .left
+    {
+        text-align: left;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .error {
+        color: Red;
+    }
+    
+    #LayoutTitle 
+    {
+        text-align: center;
+        background-color: White;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+    }
+
+    #LayoutTitle a 
+    {
+        background-color: #fff;
+    }
+    
+    #MNFLogo
+    {
+        text-align: center;
+        border: none;
+        background-color: #fff;
+        color: #fff;
+        text-decoration: none;
+        width: 70%;
+    }
+
+    
+    /* header  
+    ----------------------------------------------------------*/
+    header .float-left, 
+    header .float-right {
+        float: none;
+    }
+    
+    /* logo */
+    header .site-title {
+        /*margin: 10px;*/
+        text-align: center;
+    }
+    
+}

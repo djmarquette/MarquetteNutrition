@@ -1,0 +1,23 @@
+﻿@model MNF4.ViewModels.EventFormViewModel
+
+@{
+    ViewBag.Title = "Delete Event";
+}
+
+<h2>Delete Event</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>MNF Event</legend>
+    
+    @Html.Partial("_EventDetailsPartial")
+
+</fieldset>
+
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+
+        @Html.ActionLink("Back to List", "List")
+    </p>
+}

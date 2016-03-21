@@ -1,0 +1,26 @@
+﻿@model MNF4.ViewModels.EventFormViewModel
+
+@{
+    ViewBag.Title = "Edit Event";
+}
+
+<h1>Edit Event</h1>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+
+    <fieldset>
+        <legend>Edit Event</legend>
+
+        @Html.Partial("_EventFormPartial")
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "List")
+    </div>

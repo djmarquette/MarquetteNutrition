@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Celiac Disease";
+    ViewBag.Description = @"Celiac disease is a chronic autoimmune intestinal disorder triggered by eating gluten. To 
+live a happy, healthy life with celiac; you just need to learn what to do!";
+}
+
+<div itemscope="itemscope" itemtype="http://schema.org/MedicalWebPage">
+    <link itemprop="audience" href="http://schema.org/Patient" />
+    <link itemprop="specialty" href="http://schema.org/DietNutrition" />
+    <h1>
+        <span itemprop="about" itemscope="itemscope" itemtype="http://schema.org/MedicalCondition">
+            <span itemprop="name">Celiac Disease</span>
+        </span>
+    </h1>
+
+    <div>
+        <img id="CeliacCCthumb" alt="Celiac Crash Course" src="/Content/Images/CeliacCrashCourse.jpg" title="Celiac Crash Course" />
+    </div>
+    <div id="celiacIntro">
+        <p>
+            <strong>Are you unsure what you can eat?</strong>&nbsp; Do you wonder if you need to be taking supplements, and if 
+            so which ones?&nbsp; <strong>Do you just want to go out to eat with friends and not have to worry about 
+                                     it?</strong> &nbsp; I have worked with MANY people who have celiac and have gone through the 
+            same struggles.
+        </p>
+        <p>
+            I can help you navigate a gluten free diet to enable you to live the life you want.&nbsp; Download my 
+            FREE "Celiac Crash Course" ebook.&nbsp; In it you will find information on exactly how to implement a 
+            gluten free diet including information on which foods and ingredients (including additives) are gluten 
+            free, as well as which ingredients contain gluten and need to be avoided.
+        </p>
+        <p> 
+            Still have questions?&nbsp; @Html.ActionLink("Contact me", "Index", "Contact") for more information.
+        </p>
+    </div>
+    <div class="clear"></div>
+    <div>
+        @Html.Partial("_OptInPartial")
+    </div>
+
+    <h4>What is Celiac Disease?</h4>
+    <img id="villiJpg" src="/Content/Images/celiac villi.jpeg" alt="Normal and damaged villi" title="Healthy and damaged Villi" />
+    <p>
+        Celiac disease is a chronic autoimmune intestinal disorder triggered by eating gluten.
+        Sometimes referred to as nontropical sprue, gluten intolerance, celiac sprue, or
+        gluten-sensitive enteropathy, this condition is often misdiagnosed and misunderstood.
+        When a person with gluten intolerance eats foods containing gluten, an immune reaction
+        occurs in the small intestine. The result is damage to the villi (small, finger-like
+        projections) on the surface of the small intestine. The villi become inflamed and
+        flattened (villous atrophy), which causes an inability to absorb many different
+        types of nutrients from food. As many as one in 133 adults, or 1% of the population,
+        in the United States suffer from an intolerance to gluten.</p>
+
+    <h4>What is gluten?</h4>
+    <p>
+        Gluten is a protein found in wheat and other flours. Grains that contain gluten
+        include wheat, barley, and rye. Ingredients in foods made from these grains also
+        contain gluten-things like farina, graham flour, semolina, durum wheat, bulgur,
+        Kamut, kasha, matzo meal, spelt, and triticale. Common foods that contain gluten
+        include white or whole wheat bread, flour tortillas, pita bread, crackers, many
+        cereals, pasta, cookies, gravies, and sauces.</p>
+
+    <h4>What are the symptoms of celiac disease?</h4>
+    <p>
+        The range and severity of symptoms can vary widely, and effect many systems in the
+        body (not just the gastrointestinal system), which is one reason it is so difficult
+        to diagnose. Common symptoms include diarrhea, abdominal pain, and bloating that
+        comes and goes. Symptoms may be similar to those of irritable bowel syndrome, Crohn’s
+        disease, gastric ulcers, parasitic infections, or anemia. Some people have “silent
+        celiac disease,” meaning they have no gastrointestinal symptoms.</p>
+
+    <h4>What is the cause of celiac disease?</h4>
+    <p>
+        The exact cause of celiac disease is unknown. However, it can be inherited. If someone
+        in your immediate family has it, you may have it as well. Celiac disease can occur
+        at any age but sometimes emerges after some form of trauma such as pregnancy, surgery,
+        or a physical injury.</p>
+
+    <h4>How is celiac disease diagnosed?</h4>
+    <p>
+        Celiac disease can be identified by specific blood tests that detect antibodies
+        that are present when a person with celiac disease has eaten gluten. Unfortunately
+        these tests are not 100% accurate. The only definitive test for diagnosing celiac
+        is a biopsy of the small intestine.</p>
+
+    <h4>How is celiac disease treated?</h4>
+    <p>
+        Celiac disease has no cure. It can be managed by completely removing gluten from
+        the diet for life. Once you have done that the intestinal villi can heal completely.
+        Sometimes additional vitamins and minerals may need to be supplemented to correct
+        deficiencies.</p>
+
+    <h4>What can I eat if I have celiac disease?</h4>
+    <p>
+        If you are on a gluten-free diet you can enjoy fresh meats, fish, and poultry, most
+        dairy products, fruits, vegetables, rice, potatoes, and gluten-free flours such
+        as rice, soy, corn, and potato flour.</p>
+
+    <h4>What should I avoid if I have celiac disease?</h4>
+    <p>
+        Breads, cereals, crackers, pasta, cookies, cakes, pies, gravies, and sauces can
+        all contain gluten. Gluten-containing grains are often found in food additives such
+        as malt flavoring and modified food starch. Gluten may also be found in foods like
+        commercial pie fillings, canned meats, condiments, soup mixes, non-dairy creamers,
+        and many other foods. Keep in mind that if you will be using processed foods, it
+        is extremely important that you become well versed in reading labels and knowing
+        where “hidden sources” of gluten may be. Marquette Nutrition & Fitness, LLC can
+        help you learn how to identify these hidden sources of gluten.</p>
+    <p>
+        There is controversy as to whether or not oats should be omitted in a gluten-free
+        diet because some people can eat them without having symptoms.</p>
+
+    <h4>How can I locate gluten-free foods?</h4>
+    <p>
+        Today there are many gluten free products on the market that can often be found
+        in regular grocery stores (in addition to specialty markets). Some products can
+        also be purchased via the Internet. An example of a gluten-free market is
+        <a href="http://www.glutenfreemall.com/" target="_blank"> The Gluten-Free Mall</a>.</p>
+
+    <p> This <a href="/Content/Documents/GFQuickStart.pdf" target="_blank">Quick Start Guide</a> will help 
+        you understand what foods to choose and which to avoid when setting up your gluten-free diet.
+    </p>
+
+    <p>
+        Click here to learn tips for 
+        <a href="/Content/Documents/GoGlutenFree.pdf" target="_blank">getting more nutrition into your Gluten-Free Diet</a>.
+    </p>
+
+    <h4>Next Steps</h4>
+    <p>
+        @Html.ActionLink("Contact Marquette Nutrition and Fitness", "Index", "Contact") to 
+        schedule an appointment for an analysis of your diet to ensure you are getting all the nutrients you 
+        need while at the same time avoiding all sources of gluten.</p>
+
+    <h4>References:</h4>
+    <p>
+        Medline Plus Medical Encyclopedia:
+        <a href="http://www.nlm.nih.gov/medlineplus/print/ency/article/000233.htm" target="_blank">
+            Celiac disease-sprue</a>.&nbsp; Accessed January 2007.
+    </p>
+    <p>
+        National Digestive Diseases Information Clearinghouse (NDDIC).
+        <a href="http://digestive.niddk.nih.gov/ddiseases/pubs/celiac/" target="_blank">Celiac Disease</a>.&nbsp; 
+        Accessed January 2007.
+    </p>
+    <p>Gluten Free Diet: A Comprehensive Resource Guide, by Shelley Case. 2008</p>
+
+    <div class="center">
+        <img src="/Content/Images/wheat free symbol.jpg" alt="Wheat Free" title="Wheat Free" />
+    </div>
+</div>

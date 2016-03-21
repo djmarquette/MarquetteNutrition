@@ -1,0 +1,25 @@
+﻿@model MNF4.ViewModels.PromoFormViewModel
+
+@{
+    ViewBag.Title = "Create Event";
+}
+
+<h1>Create Promo Code</h1>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Enter Promo Code Details</legend>
+        
+        @Html.Partial("_PromoCodeFormPartial")
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

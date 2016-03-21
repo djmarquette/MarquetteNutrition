@@ -1,0 +1,47 @@
+﻿@model MNF4.ViewModels.EmailViewModel
+@using Recaptcha;
+@{
+    ViewBag.Title = "Question";
+}
+<h1>Ask a Question</h1>
+@using (Html.BeginForm("Send", "Email"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Submit Your Question Below</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailAddress)
+            @Html.ValidationMessageFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Subject)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Subject)
+            @Html.ValidationMessageFor(model => model.Subject)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Comments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Comments)
+            @Html.ValidationMessageFor(model => model.Comments)
+        </div>
+        <div class="editor-field">
+            <strong>Please help us cut down on "Spam" by entering the two words in the box below.
+               &nbsp; Thank you!</strong><br />
+            @Html.Raw(Html.GenerateCaptcha("captcha", "clean"))
+            <input type="submit" value="Send" />&nbsp;
+            <input type="reset" value="Reset" />
+        </div>
+        <div id="captchaMessage">
+            @Html.ValidationMessage("captcha")
+        </div>
+        <br />
+        <p id="captcha"></p>
+    </fieldset>
+}

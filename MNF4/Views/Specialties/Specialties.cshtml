@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Specialties";
+    ViewBag.Description = @"Specialties include counseling in Celiac disease, PCOS, food allergies and sensitivities, 
+    sports and vegetarian nutrition, and weight management.";
+}
+
+<h1>Specialties</h1>
+
+    <p>
+        Marquette Nutrition & Fitness, LLC specializes in providing nutritional counseling for the following areas:
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Celiac Disease", "Celiac")</li>
+        <li>@Html.ActionLink("Food Reactions", "FoodReactions")
+            <ul>
+                <li>Irritable Bowel Syndrome (IBS)</li>
+                <li>Fibromyalgia</li>
+                <li>Migraines</li>
+            </ul>
+        </li>
+        <li>@Html.ActionLink("Polycystic Ovarian Syndrome (PCOS)", "PCOS")</li>
+        <li>@Html.ActionLink("Sports Nutrition", "Sports")</li>
+        <li>@Html.ActionLink("Vegetarian Nutrition", "Vegetarian")</li>
+        <li>@Html.ActionLink("Weight Management", "Weight")</li>
+    </ul>
+    <p>
+        We also provide fitness assessments and counseling for general health and wellness, and seminars related 
+        to our specialty areas.
+    </p>
+    <p>
+        @Html.ActionLink("Contact us", "Index", "Contact") for more information or to request an appointment.
+    </p>
+    <div class="center">
+        <img src="/Content/Images/man and woman consulting.JPG" alt="Man woman consulting" 
+            title="Man and woman consulting" height=283px width=425px />
+    </div>

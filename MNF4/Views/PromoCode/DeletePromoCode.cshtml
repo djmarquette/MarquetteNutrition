@@ -1,0 +1,18 @@
+﻿@model MNF4.ViewModels.PromoFormViewModel
+
+@{
+    ViewBag.Title = "DeletePromoCode";
+}
+
+<h1>Delete Promo Code</h1>
+
+<h3>Are you sure you want to delete [ @Model.Code ] ?</h3>
+
+@Html.Partial("_PromoCodeDetailsPartial")
+
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "List")
+    </p>
+}

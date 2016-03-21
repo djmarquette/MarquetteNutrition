@@ -1,0 +1,126 @@
+﻿@model MNF4.ViewModels.PromoFormViewModel
+
+<div id="PromoFormPage">
+    <script type="text/javascript">
+        $(function () { $("#StartDate").datepicker({ numberOfMonths: 3, dateFormat: 'm/d/yy', showButtonPanel: true }); })
+    </script>
+    <script type="text/javascript">
+        $(function () { $("#EndDate").datepicker({ numberOfMonths: 3, dateFormat: 'm/d/yy', showButtonPanel: true }); })
+    </script>
+    <script type="text/javascript" src="/Scripts/tinymce/tiny_mce.js"></script>
+    <script type="text/javascript">
+        tinyMCE.init({ theme: "advanced", mode: "exact", elements: "Markup", height: "480", width: "100%" });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //alert("GetDirectories script reached");
+            $.getJSON("../../api/Files/getdirectories",
+                function(data) {
+                    var items;
+                    $.each(data, function(key, val) {
+                        items += "<option value='" + val + "'>" + val + "</option>";
+                    });
+                    $('#ddlFolders').html(items);
+                });
+            
+            $('#btnUpload').click(function() {
+                $("#spanResult").html("Uploading ...");
+                if (window.FormData !== undefined) {
+                    var formData = new FormData($('form')[0]);
+                    $.ajax({
+                        url: '../../api/files/uploadfile?folder=' + $('#ddlFolders').val() +
+                            '&newfileName=' + $('#Document').val(),
+                        type: 'POST',
+                        success: function(data) {
+                            $("#spanResult").html(data);
+                        },
+                        failure: alert("File Upload Failed", "#Document".val()),
+                        data: formData,
+                        cache: false,
+                        contentType: false,
+                        processData: false
+                    });
+                }else{alert("File upload failed")}
+            });
+        });
+    </script>
+
+    @Html.HiddenFor(model => model.ID)
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Code)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Code, null, new {@title="The PromoCode - ie. /code=PromoCode", @onmouseover="ShowToolTip(this.id)"})
+        @Html.ValidationMessageFor(model => model.Code)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Name, null, new {@title="The Title of the promotion", @onmouseover="ShowToolTip(this.id)"})
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Description)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Description, null, new {@title="Does not display", @onmouseover="ShowToolTip(this.id)"})
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.StartDate)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.StartDate)
+        @Html.ValidationMessageFor(model => model.StartDate)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.EndDate)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.EndDate)
+        @Html.ValidationMessageFor(model => model.EndDate)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Message) 
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Message)
+        @Html.ValidationMessageFor(model => model.Message)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Document) &nbsp; 
+        <form enctype="multipart/form-data">
+            <input id="fileinput1" type="file" name="file" /><br/>
+        </form>
+        Upload Folder: &nbsp; <select id="ddlFolders"></select> &nbsp;
+        <span id="spanResult" />
+    </div>
+    <div class="editor-field">
+        <strong>Save file as (no ext.): </strong> 
+        @Html.TextBoxFor(model => model.Document, null, new {@title="Do not include file extension", @onmouseover="ShowToolTip(this.id)"})
+        @Html.ValidationMessageFor(model => model.Document) &nbsp; 
+        <input type="button" id="btnUpload" value="Upload" onclick="upload()" /><br/>
+    </div>
+
+    <div class="editor-field">
+        @Html.LabelFor(model => model.Active)
+        @Html.CheckBoxFor(model => model.Active)
+        @Html.ValidationMessageFor(model => model.Active)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Markup)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Markup)
+        @Html.ValidationMessageFor(model => model.Markup)
+    </div>
+</div>

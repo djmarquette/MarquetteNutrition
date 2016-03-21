@@ -1,0 +1,21 @@
+﻿@model MNF4.Models.Source
+
+@{
+    ViewBag.Title = "Delete Source";
+}
+
+<h1>Delete Source</h1>
+
+<h3>Are you sure you want to delete @ViewData["Delete?"]?</h3>
+<fieldset>
+    <legend>@ViewData["Delete?"]</legend>
+
+    @Html.Partial("_SourceDetailsPartial")
+
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "List")
+    </p>
+}

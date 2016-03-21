@@ -1,0 +1,9 @@
+﻿@model IEnumerable<MNF4.ViewModels.EventListViewModel>
+
+@{
+    ViewBag.Title = "List Events";
+}
+
+<h2>Event List (@ViewData["Count"])</h2>
+
+@Html.Partial("_EventListPartial")

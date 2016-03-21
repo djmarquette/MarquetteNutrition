@@ -1,0 +1,51 @@
+﻿@model MNF4.ViewModels.OptInViewModel
+           
+<div id="optInTarget">
+    @using (Ajax.BeginForm("Register", new AjaxOptions
+    {
+    HttpMethod = "Get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "optInTarget",
+    }))
+    {
+        <fieldset>
+            <legend></legend>
+            <table id="optInTable">
+                <tr class="editor-label">
+                    <td>
+                        @Html.LabelFor(model => model.FirstName)
+                    </td>
+                    <td>
+                        @Html.LabelFor(model => model.LastName)
+                    </td>
+                    <td>
+                        @Html.LabelFor(model => model.EmailAddress)
+                    </td>
+                </tr>
+                <tr class="editor-field">
+                    <td>
+                        @Html.EditorFor(model => model.FirstName)<br />
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.LastName)<br />
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.EmailAddress)<br />
+                    </td>
+                    <td>
+                        <input type="submit" value="Register" />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td colspan="2">
+                        @Html.ValidationSummary("Please correct the following errors and try again")
+                    </td>
+                    <td />
+                </tr>
+            </table>
+            @Html.EditorFor(model => model.botCheck)
+        </fieldset>
+    }
+    <h3 class="error">@ViewData["ConfirmationMsg"]</h3>
+</div>

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MNF4.ViewModels.PromoListViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@ViewData["Count"] Promo Code(s) meet search criteria
+
+@{ 
+    var grid = new WebGrid(Model, canPage: true, ajaxUpdateContainerId: "promoListGrid", rowsPerPage: 20);
+    grid.Pager(WebGridPagerModes.All); 
+   
+    @grid.GetHtml(htmlAttributes: new { id = "promoListGrid" }, alternatingRowStyle: "altGridRow",
+    columns: grid.Columns(
+        grid.Column(header: "Promo Code", format:(item) => @Html.ActionLink((string)item.promoCode.Code ,
+                                    "Details", "PromoCode", new { id = item.promoCode.ID }, null), canSort: false),
+        grid.Column(header: "Promo Name", format: (item) => item.promoCode.Name, canSort: false),
+        grid.Column(header: "Description", format: (item) => item.promoCode.Description, canSort: false),
+        grid.Column(header: "Start Date", format: (item) => item.promoCode.StartDate.ToShortDateString(), canSort: false),
+        grid.Column(header: "End Date", format: (item) => item.promoCode.EndDate.ToShortDateString(), canSort: false),
+        grid.Column(header: "Active?", format: (item) => item.promoCode.Active, canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Edit", "Edit", new { id = item.promoCode.ID }), canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Delete", "Delete", new { id = item.promoCode.ID }))
+    ));
+}

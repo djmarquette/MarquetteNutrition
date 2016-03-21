@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Location";
+    ViewBag.Description = @"Our address is 3421 W William Cannon Drive, Suite 145, Austin, TX 78745. This page provides directions to our 
+office, and a Google map to provide driving directions if needed.";
+}
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&sensor=false"></script>
+@Scripts.Render("/Scripts/MNF-Location.js")
+
+<h1>Location</h1>
+<div data-role="content">
+    <div id="map_canvas"></div>
+    <div id="locationDesc">
+        <small>
+            <a href="https://maps.google.com/maps?ie=UTF8&cid=7484717016252245292&q=Marquette+Nutrition+and+Fitness&iwloc=A&gl=US&hl=en-US"
+            target="_blank">View Larger Map</a>
+        </small>
+    </div>
+    <div id="locationDirections">
+        <p>
+            We are located in the Cannon Oaks Shopping Center located at the southeast corner of West William Cannon 
+            and Brodie Lane in South Austin.&nbsp; Our address is 3421 West William Cannon Drive, Suite #145.&nbsp;  
+            We are sharing space with Optimal Wellness and Chiropractic, right next door to Long Orthodontics, facing Brodie Lane. 
+        </p>
+        <p>
+            From I-35, take the William Cannon exit #228 and head west. Take a left on Brodie 
+            Lane.  Our office is on your left at the first turn in off of Brodie Lane at the southeast corner of Brodie and
+            William Cannon.  We are on the right, at the end of the office park.</p>
+        <p>
+            From Mopac, take the William Cannon exit and head east. Take a right on Brodie Lane, and
+            quickly make a left at the first turn in off of Brodie Lane.
+        </p>
+        <p>
+            Our office is conveniently located in Southwest Austin, TX not far from major roadways.&nbsp; This 
+            makes it easy to serve you whether you are coming in from Buda, Kyle, Wimberly, or San Marcos to the south; 
+            Dripping Springs, Bee Cave, Lakeway, or Westlake to the west, or even Cedar Park, Pflugerville, and 
+            Round Rock to the north.&nbsp; We even have clients coming in from Killeen, Temple and all the way 
+            from Houston, Dallas, and San Antonio.
+        </p>
+    </div>
+</div>

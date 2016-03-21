@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Sports Nutrition";
+    ViewBag.Description = @"Christine is certified by the American College of Sports Medicine(ACSM) and can help you 
+    achieve your nutritional requirements and performance goals.";
+}
+
+<h1>Sports Nutrition</h1>
+<div data-role="content">
+    <p>
+        Do you struggle to fit in all your workouts AND get enough sleep?&nbsp; Are you unsure of what you should be 
+        eating?&nbsp; Have you had nagging injuries keep your from reaching your full potential?&nbsp; I have personally 
+        been through all of these struggles and have learned some tricks and tips to overcome them! 
+    </p>
+    <p>
+        As a registered and licensed dietitian, I have gone through a lot of training specifically in sports 
+        nutrition.&nbsp; I have also been certified through the American College of Sports Medicine as a Health Fitness 
+        Specialist, and have been coaching runners for years.&nbsp; I have used my training on myself, as well as many 
+        other people, including several Ironman triathletes, to learn how to best meet the needs of endurance athletes.
+    </p>
+    <p>
+        All of this experience enables me to empower you with the ability to learn what and when to eat as well as 
+        what type of QUALITY workouts to include to maximize your potential while minimizing your risk of injury and 
+        save you time!
+    </p>
+    <div data-role="collapsible">
+        <h4>Athlete's Nutritional Needs</h4>
+        <p>
+            Athletes have very unique nutritional needs.&nbsp; These needs are influenced by age, gender, climate and 
+            sport.&nbsp; In addition, nutrition needs change during certain periods of training.&nbsp; For example, and 
+            endurance athlete who is going through a “base” period of training will have different carbohydrate/protein/fat 
+            needs than that same athlete will during competition build up, as well as during competition.
+        </p>
+        <p>
+            As a vegetarian athlete myself, I know first hand the impact that proper nutrition has on performance. No matter 
+            whether you are a professional or an amateur, the right nutrition, at the right time, will make all the difference 
+            in how well you perform and how good you feel before, during, and after an event.
+        </p>
+        <p>
+            Athletes who are vegetarian or have celiac or other food sensitivities have even more specialized needs, and 
+            I have the advanced clinical skills in these areas to meet those needs.
+        </p>
+    </div>
+    <div class="clear">
+        @Html.Partial("_OptInPartial")
+    </div>
+    <p>
+        Marquette Nutrition & Fitness, LLC specializes in meeting the needs of teenage and adult athletes who participate 
+        in cycling, running, and triathlon. To help you perform your best, I will conduct an initial assessment to determine 
+        if you currently have any nutritional deficiencies.&nbsp; Based on an initial assessment of your diet and training 
+        schedule, I will individualize a dietary plan for you.&nbsp; Supplements will be recommended on an as needed basis.&nbsp; 
+        Keep in mind that your dietary plan will vary depending on what point you are at in your training.&nbsp; 
+        @Html.ActionLink("Contact Us", "Index", "Contact") to make an appointment today.
+    </p>
+    <div id="bleacherrun">
+        <img src="/Content/Images/male running.JPG" alt="man running bleachers" title="Man running bleachers" />
+    </div>
+</div>

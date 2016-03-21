@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Nutrition and Fitness Programs";
+    ViewBag.Description = @"We have nutritional programs covering all of our specialties, as well as 
+General Wellness and Monthly Membership programs.  Click here for more info.";
+}
+
+<h1>Nutrition and Fitness Programs</h1>
+
+<div data-role="content">
+    <div>
+        <p>
+            We have recently revamped all of our programs to meet your specific needs!&nbsp;
+            Whether you are newly diagnosed with celiac, or a seasoned athlete looking to tweak
+            your nutrition and training, we have a nutrition package for you!&nbsp; Click on
+            the links below for more information on what we have to offer.
+        </p>
+        <h6>@Html.ActionLink("Celiac Programs", "Celiac", "Services")</h6>
+        <h6>@Html.ActionLink("Food Reaction Programs (LEAP)", "LEAP", "Services")</h6>
+        <h6>@Html.ActionLink("Polycystic Ovarian Syndrome (PCOS) Programs", "PCOS", "Services")</h6>
+        <h6>@Html.ActionLink("Sports Nutrition Programs", "Sports", "Services")</h6>
+        <h6>@Html.ActionLink("Vegetarian Nutrition Programs", "Vegetarian", "Services")</h6>
+        <h6>@Html.ActionLink("Weight Management Programs", "Weight", "Services")</h6>
+        <h6>@Html.ActionLink("General Health & Wellness Programs", "Wellness", "Services")</h6>
+        <h6>@Html.ActionLink("Monthly Membership Program", "Membership", "Services")</h6>
+    </div>
+</div>

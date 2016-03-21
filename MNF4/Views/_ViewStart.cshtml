@@ -1,0 +1,18 @@
+﻿@using System.Activities.Expressions
+@using System.ComponentModel
+@using System.ServiceModel.Syndication
+@using MNF4.Models
+@using MNF4.ViewModels
+@using Recaptcha
+@{
+    //if (Request.Browser.IsMobileDevice)
+    //{
+    //    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+    //}
+    //else
+    {
+        RecaptchaControlMvc.PublicKey = System.Web.Configuration.WebConfigurationManager.AppSettings["ReCaptchaPublicKey"];
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        
+    }
+}

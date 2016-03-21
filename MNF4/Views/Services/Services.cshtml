@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Services";
+    ViewBag.Description = @"Marquette Nutrition & Fitness offers a variety of services from individual consultations 
+and group seminars to ebooks and webinars";
+}
+
+<h1>Services</h1>
+
+<div>
+    <p>
+        Marquette Nutrition & Fitness offers a variety of services from individual consultations and group seminars to ebooks and webinars.
+    </p>
+    <p>
+        Christine has recently revamped all of our programs to meet your specific needs!&nbsp; Whether you are newly diagnosed with celiac, 
+        or a seasoned athlete looking to tweak your nutrition and training, we have a package for you!
+    </p>
+    <p>Looking for a speaker to come talk to your association or business?&nbsp; Christine would be happy to do so!</p>
+    <p>For clients that we have already worked with before, we do also offer individual follow up appointments that can be scheduled on an as needed basis.</p>
+    <p>In addition, we now offer a monthly membership program.</p>
+    <p>
+        Wondering which of these packages or programs may be right for you?&nbsp; 
+        @Html.ActionLink("Click here", "StrategySession", "Survey") to apply for a FREE strategy session via telephone to find out.
+    </p>
+    <p>Click on the links below for more information on what we have to offer.</p>
+
+    <h3>Nutrition Programs</h3>
+    <h6>@Html.ActionLink("Celiac Programs", "Celiac", "Services")</h6>
+    <h6>@Html.ActionLink("Food Reaction Programs (LEAP)", "LEAP", "Services")</h6>
+    <h6>@Html.ActionLink("Polycystic Ovarian Syndrome (PCOS) Programs", "PCOS", "Services")</h6>
+    <h6>@Html.ActionLink("Sports Nutrition Programs", "Sports", "Services")</h6>
+    <h6>@Html.ActionLink("Vegetarian Nutrition Programs", "Vegetarian", "Services")</h6>
+    <h6>@Html.ActionLink("Weight Management Programs", "Weight", "Services")</h6>
+    <h6>@Html.ActionLink("General Health & Wellness Programs", "Wellness", "Services")</h6>
+    <h6>@Html.ActionLink("Monthly Membership Program", "Membership", "Services")</h6>
+
+    <h3>Other Services</h3>
+    <h6>@Html.ActionLink("\"Add Ons\" - Mediator Release Testing (MRT) or Gene SNP","AddOns","Services")</h6>
+    <h6>@Html.ActionLink("Follow Up Consultations", "FollowUp", "Services")</h6>
+    <h6>@Html.ActionLink("Events", "Index", "Events")</h6>
+    <h6>@Html.ActionLink("eBooks", "Index", "ebooks")</h6>
+    <h6>@Html.ActionLink("Seminars","Seminars","Services")</h6>
+    <h6>@Html.ActionLink("Supplements ", "Supplements", "Services")</h6>
+</div>

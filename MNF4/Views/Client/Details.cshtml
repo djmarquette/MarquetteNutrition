@@ -1,0 +1,83 @@
+﻿@model MNF4.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details for @ViewData["ClientName"]</h1>
+
+<fieldset>
+    <legend>Client</legend>
+
+    <table style="width: 100%">
+        <tr>
+            <td class="leftColumn">
+                <div class="display-label">Name</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)
+                </div>
+
+                <div class="display-label">@Html.LabelFor(model => model.Address)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Address) <br />
+                    @Html.DisplayFor(model => model.City) @Html.DisplayFor(model => model.State) @Html.DisplayFor(model => model.ZipCode)
+                </div>
+
+                <div class="display-label">@Html.LabelFor(model => model.Phone)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Phone)
+                </div>
+
+                <div class="display-label">@Html.LabelFor(model => model.EmailAddress)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </div>
+
+                <div class="display-label">Source</div>
+                <div class="display-field">
+                    @*@Html.DisplayFor(model => model.SourceID)*@
+                    @ViewBag.SourceName
+                </div>
+                <br />
+            </td>
+            <td class="rightColumn">
+                <div class="display-label">@Html.LabelFor(model => model.DOB)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DOB)
+                </div>
+
+                <div class="display-label">@Html.LabelFor(model => model.StartWeight)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.StartWeight)
+                </div>
+
+                <div class="display-label">@Html.LabelFor(model => model.Doctor)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Doctor)
+                </div>
+
+                <div class="display-label">@Html.LabelFor(model => model.MaritalStatus)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.MaritalStatus)
+                </div>
+
+                <div class="display-label">@Html.LabelFor(model => model.Occupation)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Occupation)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="clear" colspan="2">
+                <div class="display-label">@Html.LabelFor(model => model.Notes)</div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Notes)
+                </div>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<p class="noPrint">
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,18 @@
+﻿@model MNF4.ViewModels.EventFormViewModel
+
+@{
+    ViewBag.Title = "Event Details";
+}
+
+<h1>Event Details</h1>
+
+<fieldset>
+    <legend>Event - @Model.Name</legend>
+    
+    @Html.Partial("_EventDetailsPartial")
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "List")
+</p>

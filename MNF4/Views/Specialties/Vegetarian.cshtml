@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Vegetarian Nutrition";
+    ViewBag.Description = @"Christine is a practicing vegetarian/amateur athelete who can recommend vegetarian 
+    friendly ways to get all the nutrition you'll need to meet any fitness goals.";
+}
+
+<h1>Vegetarian Nutrition</h1>
+
+    <p>
+        Do you want to switch to a vegetarian diet, but you are unsure how?&nbsp; Are you already vegetarian, but want 
+        to make sure you are meeting all your nutrient needs?&nbsp; Are you tired of the question “But how will you get your 
+        protein”? &nbsp; I understand!&nbsp; I have worked with many people with these same concerns.
+    </p>
+    <p>
+        I myself have been a vegetarian on and off for most of my life (“on” almost exclusively for about the past 7 years).&nbsp; 
+        Let me emphasize that unless you are allergic or otherwise reactive to a lot of plant-based protein foods, you should 
+        be able to follow a strictly plant-based diet and still meet all of your nutrient needs. 
+    </p>
+    <p>
+        I can teach you how to meet your needs and how to know if you are not!&nbsp; 
+        @Html.ActionLink("Contact me", "Index", "Contact") to find out more.
+    </p>
+    <p>
+        There are many reasons a person may choose to avoid animal foods, such as religious, ethical or health reasons.&nbsp; 
+        Once the decision is made to become vegetarian, it can be done gradually or slowly over time.
+    </p>
+
+    <img id="frutas" alt="Fruit" title = "Fruit" src="/Content/Images/Frutas25.JPG"/>
+    <div id="veggiedefs">
+        <p>
+            There are many different types of “Vegetarian” eating. Below are some common definitions:
+        </p>
+        <ul>
+            <li>Vegetarian: a generic term used to describe someone who does not eat meat, poultry,
+                fish, or seafood.</li>
+            <li>Lacto-vegetarian: someone who does not eat meat, poultry, fish, seafood and eggs,
+                but drinks milk and eats dairy products.</li>
+            <li>Lacto-ovo-vegetarian: someone who does not eat meat, poultry, fish and seafood,
+                but consumes milk, milk products, and eggs.</li>
+            <li>Vegan: someone who avoids all animal-derived foods (including meat, poultry, fish,
+                eggs and dairy products and products that may contain these items, such as supplements).</li>
+        </ul>
+    </div>
+    <p class="clear">
+        When going vegetarian, it is important that a person does not neglect adequate sources
+        of protein and B vitamins. Vitamin B12 in particular has been known to become deficient
+        in vegans if they do not take a supplemental form.
+    </p>
+
+    <div class="clear">
+        @Html.Partial("_OptInPartial")
+    </div>
+
+    <p>
+        Marquette Nutrition & Fitness, LLC can help you ensure your vegetarian diet is adequate
+        in all nutrients. Whether you are new to being vegetarian, or just looking for help
+        keeping your menu “fresh”, we are here to help.&nbsp; @Html.ActionLink("Contact Us", "Index", "Contact") to 
+        make an appointment today.            
+    </p>
+    @*<p>
+        Click here for a free, downloadable tip sheet for going vegetarian. (go veggie document)
+    </p>*@
+    <div id="videodiv" class="center">
+        <a href="http://www.ehow.com/video_4986040_vegetarian.html">How to Be a Vegetarian</a> -- powered by ehow<br />
+        <object type="application/x-shockwave-flash" data="http://cdn-i.dmdentertainment.com/DMVideoPlayer/player.swf" id="player" height="349" width="620" >
+            <param name="allowScriptAccess" value="always" />
+            <param name="allowFullScreen" value="true" />
+            <param name="movie" value="http://cdn-i.dmdentertainment.com/DMVideoPlayer/player.swf" />
+            <param name="flashVars" value="demand_scat=Diet%20&overlayAdPartner=ScanScout& Nutrition=&ss_progId=4d94c0888205a&demand_sscat=Nutrition&sitename=ehow&demand_show_generic_replay=true&demand_site_id=EHWC&demand_related=3&video_title=How%20to%20Be%20a%20Vegetarian&demand_share=facebook%2Ctwitter%2Cemail&taboolaId=ehow&sourcehd=http%3A//cdn-viper.demandvideo.com/media/6593c728-0cc6-4bdb-9f08-cc2cf13110d7/flashHD/a6519e7b-962a-4c78-8f5e-c0fa86dc13a1.flv&done=true&height=43&demand_hd=0&demand_page_url=http%3A//www.ehow.com/video_4986040_vegetarian.html&v=4.0.0.g&skin=http%3A//cdn-i.dmdentertainment.com/DMVideoPlayer/playerskin.swf&comscore_c3=7290850&demand_autoplay=0&comscore_c4=7290850&source=http%3A//cdn-viper.demandvideo.com/media/6593c728-0cc6-4bdb-9f08-cc2cf13110d7/flash/a6519e7b-962a-4c78-8f5e-c0fa86dc13a1.flv&demand_content_sourcekey=http%3A//www.ehow.com&TITLE=How%20to%20Be%20a%20Vegetarian&CONTEXT=%5Bobject%20Object%5D&demand_content_id=a6519e7b-962a-4c78-8f5e-c0fa86dc13a1&adPartner=Adap&demand_studio_id=a6519e7b-962a-4c78-8f5e-c0fa86dc13a1&KEY=DemandMediaehow&demand_iconurl=http%3A//v5-ui.ehowcdn.com/media/video_player_icon.png&ID=a6519e7b-962a-4c78-8f5e-c0fa86dc13a1&demand_icontext=What%20would%20you%20like%20to%20do%3F%20Tie%20a%20tie%3F%20Kiss%20on%20a%20date%3F%20Lose%20weight%3F%20Negotiate%20a%20raise%3F%20eHow%27s%20database%20of%20over%201%2C000%2C000%20articles%20can%20help%20you%20to%20find%20clear%20instructions%20on%20how%20to%20do%20just%20about%20everything.&ZID=starz&demand_iconlink=http%3A//www.ehow.com/&demand_uihex=ffffff&demand_related_feed=http%3A//www.ehow.com/services/video/series.xml&demand_rvdisplaymode=0&KEYWORDS=diets%2Cnutrition%2Cdieting&demand_email_url=http%3A//www.ehow.com/services/video/email.html&CATEGORIES=Health%2CDiet%20&demand_ehow_videoid=158084& Nutrition,Nutrition=&demand_continuous_play=1&DESC=Vegetarians%20avoid%20eating%20meat%2C%20poultry%20and%20seafood%20products%20because%20they%20are%20derived%20from%20living%20animals.%20Learn%20to%20become%20a%20vegetarian%20with%20tips%20from%20a%20dietitian%20in%20this%20free%20video%20on%20nutrition.&demand_video_timeout=10&demand_fb=false&ADAPTAG=diets%2Cnutrition%2Cdieting&cp=1&demand_cat=Health&COMPANION_DIV_ID=companionAd300x250&wa_vemb=1" />
+        </object><br />
+    </div>
+    <div id="topic" class="clear">
+        <p>
+            Christine filmed this video in response to a question that she receives quite frequently
+            on why someone would choose to become a vegetarian.
+        </p>
+        <p>
+            For other videos by Christine about diet and nutrition, please see the @Html.ActionLink("Media", "Media", "About") page.
+        </p>
+    </div>

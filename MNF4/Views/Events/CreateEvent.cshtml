@@ -1,0 +1,26 @@
+﻿@model MNF4.ViewModels.EventFormViewModel
+
+@{
+    ViewBag.Title = "Create Event";
+}
+
+<h1>Create Event</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+
+
+    <fieldset>
+        <legend>Enter event details</legend>
+
+        @Html.Partial("_EventFormPartial")
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset> 
+    @Html.ActionLink("Events List", "List")   
+    
+}

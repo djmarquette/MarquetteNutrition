@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Tools";
+}
+<h1>Administrative Tools</h1>
+<div id="tools">
+    <table>
+        <tr>
+            <td>
+                <h4>@Html.ActionLink("Contacts", "List", "Contact")</h4>
+            </td>
+            <td>
+                <h4>@Html.ActionLink("Clients", "List", "Client")</h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>@Html.ActionLink("EventTypes", "List", "EventType")</h4>
+            </td>
+            <td>
+                <h4>@Html.ActionLink("Events", "List", "Events")</h4>
+            </td>
+        </tr>
+@*        <tr>
+            <td>
+                <h4>@Html.ActionLink("Media Types", "List", "MediaType")</h4>
+            </td>
+            <td>
+                <h4>@Html.ActionLink("Media", "List", "Media")</h4>
+            </td>
+        </tr>*@
+        <tr>
+            <td>
+                <h4>@Html.ActionLink("Sources", "List", "Source")</h4> 
+            </td>
+            <td>
+                <h4>@Html.ActionLink("Reports", "Index", "Reports")</h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>@Html.ActionLink("Promo Codes", "List", "PromoCode")</h4> 
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+</div>

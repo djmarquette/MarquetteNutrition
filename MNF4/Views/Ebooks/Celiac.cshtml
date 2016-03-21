@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Celiac ebooks";
+    ViewBag.Description = @"Are you still struggling with balancing a gluten free diet? Find out how to overcome the symptoms 
+of celiac in my 'Celiac Boot Camp!' ebook";
+}
+
+<h1 itemscope itemtype="http://schema.org/Product">Celiac ebooks</h1>
+<div itemprop="name" itemscope="itemscope" itemtype="http://schema.org/EBook">
+    <h4 id="Celiacebooks">
+        Celiac BootCamp - Everything you need to know to Survive & Thrive
+    </h4>
+
+    <div>
+        <p>
+            <strong>Are you still struggling with balancing a gluten free diet?</strong>&nbsp; Do you feel like your health is just not improving the 
+            way it should?&nbsp; Find out how to overcome the symptoms of celiac in my "Celiac Boot Camp!
+        </p>
+        <p>
+            I have an intolerance to wheat myself, and while it is not the same as having celiac, I do personally understand the need to know how 
+            to read labels, prepare foods, what questions to ask wait staff, and more.
+        </p>
+    </div>
+
+    <div>
+        <img id="CeliacBootcampPic" class="ebookPic" alt="Celiac Boot Camp" src="/Content/Images/CeliacBootCamp.jpg"
+            itemtype="http://schema.org/Thing" itemprop="image" itemscope="itemscope"/>
+    </div>
+    <div id="CeliacBCDescription" itemprop="description">
+        <p>
+            The <strong>“Celiac BootCamp”</strong> consists of a manual and 1 hour audio that detail how to implement a gluten free 
+            lifestyle.&nbsp; Below are just a few of the things you will learn how to do:
+        </p>
+        <ul>
+            <li>Implement a gluten free lifestyle</li>
+            <li>Avoid cross contamination</li>
+            <li>Plan healthy, balanced meals</li>
+            <li>Determine if you need supplements or not</li>
+            <li>Have your questions answered when calling manufacturers</li>
+            <li>Eat out!</li>
+            <li>ebook and audio recording for only <span itemprop="price">$@ViewBag.Price</span></li>
+        </ul>
+        <p>You can live a happy, healthy live with celiac; you just need to learn what to do!</p>
+    </div>
+
+        @using (Html.BeginForm("PostToPayPal", "Payments"))
+        {
+            <input type="hidden" name="id"  value="ebCeliacBC" />
+            <input type="hidden" name="title" value="Celiac Bootcamp" />
+            <input type="hidden" name="amount" value= @ViewBag.Price />
+            <input type="image" alt="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                    name="btnCeliacBCSubmit"/>
+        }
+    <div class="clear"></div>
+</div>
+
+
+
+

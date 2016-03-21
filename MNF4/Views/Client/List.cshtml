@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MNF4.ViewModels.ClientListViewModel>
+
+@{
+    ViewBag.Title = "Client List";
+}
+
+<h1>Client List (@ViewData["Count"])</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@using (Ajax.BeginForm("Search", new AjaxOptions
+{
+    HttpMethod = "Get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "clientList"
+}))
+{        
+    <input type="text" name="q" />
+    <input type="submit" value="Search" />
+}
+<br />                
+
+<div id="clientList">
+    @Html.Partial("_ClientListPartial") 
+</div>
+

@@ -1,0 +1,28 @@
+﻿@model MNF4.Models.Source
+
+@{
+    ViewBag.Title = "Create Source";
+}
+
+<h1>Create New Source</h1>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Create New Source</legend>
+
+        @Html.Partial("_SourceFormPartial")
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@Content.Script("jquery.validate.min.js", Url)
+@Content.Script("jquery.validate.unobtrusive.min.js", Url)

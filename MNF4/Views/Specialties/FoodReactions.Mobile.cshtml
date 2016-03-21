@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Food Reactions";
+    ViewBag.Description = @"A certified Lifestyle, Eating, and Performance(LEAP) Therapist, Christine has advanced 
+    training in the MRT Blood Test and dealing with food sensitivities.";
+}
+
+<div data-role="content" itemscope="itemscope" itemtype="http://schema.org/MedicalWebPage">
+    <link itemprop="audience" href="http://schema.org/Patient" />
+    <link itemprop="specialty" href="http://schema.org/DietNutrition" />
+    <h1>Food Reactions</h1>
+    <p>
+        Do you think your food is making you sick?&nbsp; Are you unsure if you have food allergies, sensitivities, or 
+        intolerances?&nbsp; I can help you answer these questions.  
+    </p>
+    <p>
+        You can learn how to prevent reactions, eat a healthy diet, and live your best life!&nbsp; You just need know what 
+        to avoid, how to read labels, and learn what to do in case of an emergency.
+    </p>
+
+    <p>
+        As a Certified Lifestyle, Eating, and Performance (LEAP) Therapist, I have advanced training in how to deal with 
+        food sensitivities.&nbsp; As a child, I also had food allergies to several different foods and medications, and 
+        know first hand the fear that comes with severe reactions.&nbsp; I now know how to prevent reactions, and deal 
+        with “accidental exposure” when it happens.  
+    </p>
+
+    <div id="histaminePic">
+        <img src="/Content/Images/histamine-is-released.jpg" alt="Histamine" title="Histamine is released" />
+    </div>
+
+    <p id="LEAPIntro">
+        Wondering if I can help you identify your food sensitivities?&nbsp; @Html.ActionLink("Fill out our prescreening form", "LEAPPrescreen","Survey") 
+        to see if you might be a good candidate for the MRT blood test and LEAP program.&nbsp; Your form will be reviewed and you 
+        will be contacted within 2 business days.&nbsp; As a “thank you” for filling out the prescreening form, you will 
+        receive a complimentary subscription of our monthly newsletter.
+    </p>
+
+    <p>
+        There are three main types of negative reactions that a person can have to food:
+        food allergies, food intolerances and food sensitivities.
+    </p>
+
+    <p>
+        The information below will give you the basics on the three main types of food reactions.&nbsp; 
+        @Html.ActionLink("Contact me", "Index", "Contact") for more.   
+    </p>
+
+    <div data-role="collapsible">
+        <h4>What are food allergies?</h4>
+        <p>
+            True food allergy involves the type 1 pathway in the immune system. This type of
+            reaction is almost immediate, can be caused by as small as one molecule of food,
+            and may even result in death.&nbsp; Food allergy involves IgE antibodies and typically
+            affects the respiratory system. Symptoms include hives, difficulty breathing, and
+            itchy/watery eyes.
+        </p>
+        <p>
+            The following video animations illustrate this process:
+            <br />
+            <a href="http://www.healthcentral.com/animation/408/20/allergy.html" target="_blank">Allergy overview</a><br />
+            <a href="http://highered.mcgraw-hill.com/sites/0072556781/student_view0/chapter33/animation_quiz_2.html"
+               target="_blank">IgE Mediated Type 1 Hypersensitivity</a>
+        </p>
+    </div>
+
+    <div data-role="collapsible">
+        <h4>What are food intolerances?</h4>
+        <p>
+            Food intolerances do not involve the immune system.&nbsp; Food intolerance usually occurs because 
+            the person does not have enough of a particular enzyme to digest a certain food.&nbsp; For example, 
+            people who are lactose intolerant do not have enough of the lactase enzyme to digest lactose 
+            in milk products.&nbsp; If they have a milk product, all that lactose does not get digested, so when 
+            it reaches the intestines, bacteria in the intestines feed on that undigested lactose, causing 
+            bloating, cramping, and diarrhea.
+        </p>
+    </div>
+
+    <div data-role="collapsible">
+        <h4>What are food sensitivities?</h4>
+        <p>
+            Food sensitivities also involve the immune system, but typically involve the type
+            3 and type 4 pathways.&nbsp; These pathways do not use IgE antibodies, but may use other
+            types of antibodies or cell mediated reactions or complement.&nbsp; Food sensitivities
+            have been shown to cause or aggravate many different conditions, such as fibromyalgia,
+            IBS, migraines, joint pain, skin eruptions, and many more.
+        </p>
+        <p>
+            This is a video animation of <a href="http://highered.mcgraw-hill.com/sites/0072556781/student_view0/chapter33/animation_quiz_3.html"
+                                            target="_blank"> Type 3 (immune complex) hypersensitivity</a>.
+            <br />
+        </p>
+        <p>
+            Here is a video animation of <a href="http://highered.mcgraw-hill.com/sites/0072556781/student_view0/chapter33/animation_quiz_4.html"
+                                            target ="_blank"> Type 4 reactions</a>.
+        </p>
+    </div>
+
+    <div data-role="collapsible">
+        <h4>How can food sensitivities be detected?</h4>
+        <p>
+            Food sensitivities have historically been very difficult to evaluate because they
+            involve more than 1 pathway, numerous mediators, and symptoms can take from as little
+            as a few hours to as long as 3 days to manifest.&nbsp; However, the Mediator Release Test
+            (MRT), a patented blood test developed by Dr. Mark Pasula of Signet Diagnostic,
+            Inc. has been able to identify the causes of both food and chemical sensitivities.
+            It is currently the most accurate test available on the market.
+        </p>
+    </div>
+
+    <div data-role="collapsible">
+        <h4>MRT Blood Test Specifics</h4>
+        <p>
+            Because MRT is an end-point test, it can determine sensitivities whether type 3
+            or type 4 pathways are used.&nbsp; When a food sensitivity reaction occurs, mediators
+            such as histamine, cytokines, etc. are released from various immune cells. MRT works
+            by measuring the changes in the ratio of liquid to solids after whole blood is exposed
+            to an antigen and mediators are released.&nbsp; The principle behind MRT is that the total
+            volume of the sample will remain the same (V1 + V2 = V3), but when exposed to an
+            antigen, the volume of solids (V1) and the volume of liquids (V2) will change due
+            to mediator release. (<a href="http://www.nowleap.com" target="_blank">www.nowleap.com</a>)
+        </p>
+        <p>
+            The strengths of the MRT blood test are that it is very accurate (94.5% sensitivity and 91.7% 
+            specificity), has excellent reliability (split sample reproducibility is consistently greater
+            than 90%), measures the outcomes of all non-IgE mediated hypersensitivity reactions,
+            is an indirect method of measuring mediator release (therefore is not limited to
+            specific cells), can test both food and chemical reactions, is patented, and quantifies
+            the level of reaction (which allows an individualized diet plan to be developed).
+        </p>
+        <p>
+            MRT tests 123 different foods and 27 different chemicals.&nbsp; Results are classified
+            into 3 categories: green (least reactive), yellow (moderately reactive), and red
+            (reactive).&nbsp; Based on these results, a 6-phased diet called the "Lifestyle Eating
+            and Performance" (LEAP) ImmunoCalm diet is implemented.
+        </p>
+        <p>
+            By following the ImmunoCalm diet, the majority of people with food sensitivities
+            can experience at least a 50% reduction in symptoms, while some people experience
+            complete resolution of symptoms.
+        </p>
+    </div>
+
+    <h4>Next Steps</h4>
+    <p>
+        To see if you might be a good candidate for the MRT blood test and LEAP program,  
+        @Html.ActionLink("fill out our prescreening form", "LEAPPrescreen","Survey").&nbsp; Your form will be 
+        reviewed and you will be contacted within 2 business days.&nbsp; As a “thank you” for filling 
+        out the prescreening form, you will receive a complimentary subscription of our monthly newsletter.
+    </p>
+</div>

@@ -1,0 +1,15 @@
+﻿@model MNF4.ViewModels.PromoFormViewModel
+
+@{
+    ViewBag.Title = "PromoCode Details";
+}
+
+<h1>PromoCode Details</h1>
+
+@Html.Partial("_PromoCodeDetailsPartial")
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "List")
+</p>
+

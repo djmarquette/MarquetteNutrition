@@ -1,0 +1,17 @@
+﻿@model MNF4.ViewModels.ebookViewModel
+
+@{
+    ViewBag.Title = "Purchase Complete";
+}
+
+<h1>Purchase Complete</h1>
+
+<h4>Thank you for your purchase. </h4>
+
+<h5>Item Purchased: @Model._title</h5>
+
+<h5>Please click the link below to download your ebook:</h5>
+<a href="@Model.bookURL" target="_blank">@Model._title</a><br/> 
+
+<h5>Please click the link below to download your audio book:</h5>
+<a href="@Model.audioURL" target="_blank">@Model._title Audio Book</a>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MNF4.ViewModels.EventListViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@ViewData["Count"] Event(s) meet search criteria
+
+@{ 
+    var grid = new WebGrid(Model, canPage: true, ajaxUpdateContainerId: "eventListGrid", rowsPerPage: 20);
+    grid.Pager(WebGridPagerModes.All);
+   
+    @grid.GetHtml(htmlAttributes: new { id = "eventListGrid" }, alternatingRowStyle: "altGridRow",
+        columns: grid.Columns(
+        grid.Column(header: "Event Name", format:(item) => @Html.ActionLink((string)item.mnfEvent.Name , 
+                            "Details", "Events", new { id = item.mnfEvent.ID }, null), canSort: false),
+        grid.Column(header: "Event Type", format: (item) => item.mnfEvent.EventType.Name, canSort: false),
+        grid.Column(header: "Event Date", format: (item) => item.mnfEvent.EventDate.ToShortDateString(), canSort: false),
+        grid.Column(header: "Start Time", format: (item) => item.mnfEvent.StartTime.ToShortTimeString(), canSort: false),
+        grid.Column(header: "End Time", format: (item) => item.mnfEvent.EndTime.ToShortTimeString(), canSort: false),
+        grid.Column(header: "Description", format: (item) => @CustomHelpers.Truncate(item.mnfEvent.Description, 50), canSort: false),
+        grid.Column(header: "Show Event?", format: (item) => item.mnfEvent.ShowEvent, canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Edit", "Edit", new { id = item.mnfEvent.ID }), canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Delete", "Delete", new { id = item.mnfEvent.ID }))
+    ));
+}
+

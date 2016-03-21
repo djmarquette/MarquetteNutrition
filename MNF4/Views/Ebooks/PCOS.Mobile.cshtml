@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "PCOS ebooks";
+    ViewBag.Description = @"Trained in the nutritional treatment of PCOS, Christine created a 3 part ebook series 
+to help women understand and overcome PCOS and improve their lives.";
+}
+
+<div data-role="content" data-theme="f">
+    <h1>PCOS ebooks</h1>
+    
+    <h3 id="ebooks">3 Part ebook Series on Polycystic Ovarian Syndrome (PCOS)</h3>
+
+    <p class="bold">
+        Are you overwhelmed with all of the PCOS information you see on the internet?&nbsp; Unsure what to do?&nbsp; 
+        @Html.ActionLink("Get the facts in a short, easy to read format, or better yet, listen to the audio books!",
+                                    "PCOS", "ebooks", null, null, "QuickStart", null, null);
+    </p>
+    <p>
+        If you’re like many of the women I work with, you:</p>
+    <ul>
+        <li>Wonder WHY this is happening to you</li>
+        <li>Feel like you cannot truly enjoy eating without feeling guilty or deprived</li>
+        <li>Fear that you may not be able to have children</li>
+        <li>Feel overwhelmed by all the possible “risk” factors</li>
+        <li>Want to feel healthy, but don’t know how</li>
+    </ul>
+    <p>
+        <strong>I hear you!</strong> I didn’t find out about PCOS until I started working in health care 
+        almost ten years ago as a registered and licensed dietitian.&nbsp; I started having clients who 
+        were having symptoms that I remembered going through.&nbsp; I realized then that I needed
+        to learn as much as I could about the condition so that I could help not only my
+        clients, but myself as well.
+    </p>
+    <p>
+        Sadly, there are still not many nutritionists who have expertise in PCOS.&nbsp; That’s
+        why I created my ebook series and accompanying audio books on PCOS.
+    </p>
+    <p>
+        You can buy any or all of these ebooks safely and securely using PayPal.&nbsp; Don't
+        have a PayPal account?&nbsp; You can pay with your own credit card here as well.
+    </p>
+    <hr />
+
+    <div>
+        <img class="ebookPic" alt="PCOS Quick Start" src="/Content/Images/PCOSQuickStart.jpg" />
+    </div>
+    <div class="ebookDescription">
+        <p>My ebook <strong>“The Quick Start Guide to PCOS”</strong> will teach you:</p>
+        <ul>
+            <li>Exactly how PCOS is diagnosed and how it is different from other similar conditions
+                so that you can feel confident that you are getting the right treatment and not
+                wasting time! </li>
+            <li>What health care providers you should have on your team to help you prevent complications
+                and reach your goals in the safest, quickest way </li>
+            <li>What questions to ask your healthcare team so that you know you are getting the
+                best care possible </li>
+            <li>How exercise affects your body and the best types to do to keep your whole body
+                healthy </li>
+            <li>ebook and audio recording for only $14.95</li>
+        </ul>
+        @using (Html.BeginForm("PostToPayPal", "Payments", null, FormMethod.Post, new {data_ajax="false"}))
+        {
+            <input type="hidden" name="id" value="ebPCOS1" />
+            <input type="hidden" name="title" value="Quick Start Guide to PCOS">
+            <input type="hidden" name="amount" value="$14.95">
+            <button type="submit" class="PPbutton" data-role="button" name="btnQuickStartSubmit">Buy Now</button>
+        }
+    </div>
+    <hr />
+
+    <div>
+        <img class="ebookPic" alt="Nutrition Guide to PCOS" src="/Content/Images/PCOSNutritionGuide.jpg" />
+    </div>
+    <div class="ebookDescription">
+        <p>
+            In <strong>“The Nutrition Guide to PCOS”</strong> you will get expanded information
+            on the basic nutritional foundation given in The Quick Start Guide as well as detailed
+            information on:
+        </p>
+        <ul>
+            <li>How foods affect your hormones so that you know what to eat and when to eat to help
+                you lose weight and feel great</li>
+            <li>How to read food labels</li>
+            <li>How to plan meals (including menu templates)</li>
+            <li>Menu examples</li>
+            <li>Recipes</li>
+            <li>ebook and audio recording for only $14.95</li>
+        </ul>
+        @using (Html.BeginForm("PostToPayPal", "Payments", null, FormMethod.Post, new { data_ajax = "false" }))
+        {
+            <input type="hidden" name="id" value="ebPCOS2" />
+            <input type="hidden" name="title" value="Nutrition Guide to PCOS">
+            <input type="hidden" name="amount" value="$14.95">
+            <button type="submit" class="PPbutton" data-role="button" name="btnNutrGuideSubmit">Buy Now</button>
+        
+        }
+    </div>
+    <hr />
+
+    <div>
+        <img class="ebookPic" alt="Supplement Guide to PCOS" src="/Content/Images/PCOSSupplementGuide.jpg" />
+    </div>
+    <div class="ebookDescription">
+        <p>
+            In <strong>“The Supplement Guide to PCOS”</strong> you will learn:
+        </p>
+        <ul>
+            <li>What nutrients you may be deficient in (vitamins, minerals, and essential fatty
+                acids)</li>
+            <li>How to know which supplements may improve your symptoms</li>
+            <li>Which supplements to avoid</li>
+            <li>How to prevent serious side effects from interactions between foods or supplements
+                and medications potentially used to treat PCOS</li>
+            <li>ebook and audio recording for only $14.95</li>
+        </ul>
+        @using (Html.BeginForm("PostToPayPal", "Payments", null, FormMethod.Post, new { data_ajax = "false" }))
+        {
+            <input type="hidden" name="id" value="ebPCOS3" />
+            <input type="hidden" name="title" value="Supplement Guide to PCOS">
+            <input type="hidden" name="amount" value="$14.95">
+            <button type="submit" class="PPbutton" data-role="button" name="btnSupplGuideSubmit">Buy Now</button>
+        }
+    </div>
+    <hr />
+
+    <div>
+        <p>
+            Not taking action now could cost you thousands and thousands of dollars due to needing:</p>
+        <ul>
+            <li>More doctors’ appointments</li>
+            <li>More medications</li>
+            <li>More time away from family or work</li>
+            <li>But it can also cost you more than just time and money.&nbsp; Every day that you
+                wait to learn how to overcome your PCOS you increase your risk of: </li>
+            <li>Developing Heart Disease</li>
+            <li>Developing Diabetes</li>
+            <li>Not being able to have children</li>
+        </ul>
+        <p>
+            It is possible to prevent or significantly lower the risk of these 3 things from
+            happening, as well as increase your quality of life.&nbsp; You just need to learn
+            what to do.
+        </p>
+    </div>
+</div>

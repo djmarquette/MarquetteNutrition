@@ -1,0 +1,25 @@
+﻿@model MNF4.ViewModels.ClientFormViewModel
+
+@{
+    ViewBag.Title = "Edit Client";
+}
+
+<h1>Edit @ViewData["Edit"]</h1>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Edit Client</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.Partial("_ClientFormPartial")
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

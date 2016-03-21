@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Membership Programs";
+    ViewBag.Description = @"Once you've completed one of our Service packages, our monthly membership programs 
+are just what you need to stay on track.";
+}
+
+<h1>Monthly Membership Programs</h1>
+
+<div data-role="content">
+    <div>
+        <p>Have you recently completed one of our our packages, and don't want to lose your momentum?</p>
+        <p>Our monthly membership program is just what you need to stay on track.</p>
+        <p>Choose from either our standard or platinum options:</p>
+    
+        <table id="membership">
+            <tr>
+                <th></th>
+                <th class="mbrStandard">Standard</th>
+                <th class="mbrPremium">Premium</th>
+            </tr>
+            <tr>
+                <td class="mbrService">Weekly Check In</td>
+                <td class="mbrStandard">X</td>
+                <td class="mbrPremium">X</td>
+            </tr>
+            <tr>
+                <td class="mbrService">Monthly Follow Up Appointment</td>
+                <td class="mbrStandard"></td>
+                <td class="mbrPremium">X</td>
+            </tr>
+            <tr>
+                <td class="mbrService">Bi-Monthly Follow Up Appointment</td>
+                <td class="mbrStandard">X</td>
+                <td class="mbrPremium"></td>
+            </tr>
+            <tr>
+                <td class="mbrService">Access to Recipe database</td>
+                <td class="mbrStandard">X</td>
+                <td class="mbrPremium">X</td>
+            </tr>
+            <tr>
+                <td class="mbrService">Access to Tip Sheets</td>
+                <td class="mbrStandard">X</td>
+                <td class="mbrPremium">X</td>
+            </tr>
+            <tr>
+                <td class="mbrService">Weekly Video Tip</td>
+                <td class="mbrStandard"></td>
+                <td class="mbrPremium">X</td>
+            </tr>
+            <tr>
+                <td class="mbrService">"Surprise" Perks</td>
+                <td class="mbrStandard"></td>
+                <td class="mbrPremium">X</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <p>@Html.ActionLink("Contact us", "Create", "Contact") if you are interested in a monthly membership program.</p>
+    </div>
+</div>

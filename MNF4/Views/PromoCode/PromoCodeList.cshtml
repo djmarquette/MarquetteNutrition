@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MNF4.ViewModels.PromoListViewModel>
+
+@{
+    ViewBag.Title = "Promo Code List";
+}
+
+<h1>Promo Codes (@ViewData["Count"])</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Ajax.BeginForm("Search", new AjaxOptions
+{
+    HttpMethod = "Get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "promoList" 
+}))
+{        
+    <input type="text" name="q" />
+    <input id="btnSubmit" type="submit" value="Search" />
+}
+<br />                
+
+
+<div id="promoList">
+    @Html.Partial("_PromoListPartial")
+</div>

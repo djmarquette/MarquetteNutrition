@@ -1,0 +1,89 @@
+﻿@using MNF4.Models
+@model MNF4.ViewModels.ContactFormViewModel
+
+<script type="text/javascript">
+jQuery(function($){
+   $("#Phone").mask("(999) 999-9999");
+   $("#ZipCode").mask("99999?-9999");
+});
+</script>
+           
+    <div class="editor-label">
+        *@Html.LabelFor(model => model.FirstName)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.FirstName,new {required="required", autofocus="autofocus", placeholder="First Name"})
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div>
+
+    <div class="editor-label">
+        *@Html.LabelFor(model => model.LastName)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.LastName, new {placeholder="Last Name"})
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div>
+
+    <div class="editor-label">
+        *@Html.LabelFor(model => model.EmailAddress)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.EmailAddress, new {type="email", placeholder="email address"})
+        @Html.ValidationMessageFor(model => model.EmailAddress)
+    </div>
+
+    <div class="editor-label">
+        <div class="editor-field">
+            @Html.EditorFor(model => model.optIn)&nbsp; 
+            @Html.ValidationMessageFor(model => model.optIn)
+        @Html.LabelFor(model => model.optIn)
+        </div>
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Address)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Address, new {placeholder="Address"})
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.City)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.City, new {placeholder="City"})
+        @Html.ValidationMessageFor(model => model.City)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.State)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.State, StatesDictionary.StateSelectList)
+        @Html.ValidationMessageFor(model => model.State)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ZipCode)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.ZipCode, new { @id = "ZipCode", placeholder="ZipCode" })
+        @Html.ValidationMessageFor(model => model.ZipCode)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Phone)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Phone, new { @id = "Phone" }) 
+        @Html.ValidationMessageFor(model => model.Phone )
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Comments)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Comments, new {placeholder="Enter additional comments here"})
+        @Html.ValidationMessageFor(model => model.Comments)
+    </div>

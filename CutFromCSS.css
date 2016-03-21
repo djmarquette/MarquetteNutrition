@@ -1,0 +1,100 @@
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul.menu 
+{
+    position: relative;
+    clear: right;
+    border-bottom: 1px #8CC63F solid;
+    margin: 0;
+    margin-left: 180px; /* leave room for social media icons    */
+    text-align: right;
+    z-index: 100;       /* keep menu items on top of other objects  */
+}
+
+ul.menu li {
+    position: relative;
+    line-height: 1.0em;
+    display: inline;
+    list-style: none;
+    z-index: 100;       /* keep menu items on top of other objects  */
+}
+
+ul.menu li a 
+{
+    position: relative;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    /*background-color: #e8eef4;*/
+    background-color: #f9f0fb;  /* light lavender */
+    color: #006838;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    z-index: 100;
+}
+
+/*#menu li ul    Submenu  */
+ul.submenu
+{
+    position: absolute;
+    background-color: #f9f0fb;  /* light lavender */
+    display: none;
+    top: 1.75em;        /*  Need this for IE    */
+    line-height: 1.0em;
+    left: 0;  /*11/13  */
+    margin: 0px;    
+    width: 200px;
+    z-index: 100;   /* Keep submenus on top of parent menu item*/
+}
+
+ul.menu li>ul  /*  tweaks for IE   */ 
+{
+    padding: 0;
+    margin: 0;
+    z-index: 100;       /* keep menu items on top of other objects  */
+}
+
+ul.submenu li a
+{
+    position: relative;
+    padding: 5px 5px;
+    line-height: 1.75em;
+    text-align: center;
+    display: list-item;
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border: thin dotted gray;
+    z-index: 100;       /* keep menu items on top of other objects  */
+}
+
+ul.menu li:hover ul, li.hover ul /*:hover must go after above rules    */
+{
+    display: block;
+    text-decoration: none;
+    z-index: 1000;       /* keep menu items on top of other objects  */
+}
+
+/*  Programs Sub-sub menu  */
+/*  IE specific handling of cascading menus */
+/*  Chrome  */
+ul.menu #liPrograms ul#ProgramMenu  /* Leave as is for Chrome   */
+{
+    display: none;
+    position: absolute;
+    height: 100%;
+    margin-top: -2em;
+    margin-left: 0px;
+    width: 200px;
+    z-index: 100;
+}
+
+li #liPrograms:hover ul#ProgramMenu, li #liPrograms.over ul#ProgramMenu /* */
+{
+    display: block;
+    z-index: 100;       /* keep menu items on top of other objects  */
+}

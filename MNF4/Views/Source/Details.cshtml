@@ -1,0 +1,18 @@
+﻿@model MNF4.Models.Source
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details for @ViewBag.Name</h1>
+
+<fieldset>
+    <legend>@ViewBag.Name</legend>
+
+    @Html.Partial("_SourceDetailsPartial")
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

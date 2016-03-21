@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MNF4.ViewModels.ContactListViewModel>
+           
+@ViewData["Count"] Contact(s) meet search criteria
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Email Address
+        </th>
+        <th>
+            Source
+        </th>
+        <th>
+            Submit Date
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.ActionLink(item.contact.FirstName + " " + item.contact.LastName, "Details", "Contact", new { id = item.contact.ID }, null)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contact.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contact.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.source.Name) 
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contact.SubmitDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.contact.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.contact.ID })
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,46 @@
+Sitemap: http://www.marquettenutrition.com/sitemap.xml
+
+User-agent:	*
+Allow:		/
+
+User-agent: *
+Disallow:	/Account
+
+User-agent: *
+Disallow:	/Admin
+
+User-agent: *
+Disallow:	/Client
+
+User-agent: *
+Disallow:	/Contact/List
+
+User-agent: *
+Disallow:	/MNFStore
+
+User-agent: *
+Disallow:	/store
+
+User-agent: *
+Disallow:	/Payments
+
+User-agent: *
+Disallow:	/Source
+
+User-agent: *
+Disallow:	/Webinars
+
+User-agent: *
+Disallow:	/Errors
+
+User-agent: *
+Disallow:	/Email
+
+User-agent: *
+Disallow:	/Services/LeapPrescreen
+
+User-agent: *
+Disallow:	/Services/ebooks
+
+User-agent: *
+Disallow:	/Services/Events

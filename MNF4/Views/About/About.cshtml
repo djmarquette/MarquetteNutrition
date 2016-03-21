@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "About Us";
+    ViewBag.Description = @"Here find our Mission Statement and links to pages about Christine, FAQ's, media, 
+                            office location, and forms you'll need for your appointment.";
+}
+
+<div itemscope="itemscope" itemtype="http://schema.org/AboutPage">
+
+    <h1>About Us</h1>
+
+    <h3>Our Mission</h3>
+    <p>
+        Our mission is to improve the health and fitness of our clients by providing them
+        the nutritional tools they need to achieve their goals.
+    </p>
+
+    <h4>@Html.ActionLink("About Christine", "Chris", null, new {itemprop="relatedLink"})</h4>
+    <p>Christine Marquette's Credentials and Bio.</p>
+    <h4>@Html.ActionLink("Christine's Blog", "Blog", null, new { itemprop = "relatedLink" })</h4>
+    <p>Christine's blog on all things Nutrition & Fitness</p>
+    <h4>@Html.ActionLink("Frequently Asked Questions", "FAQ", null, new { itemprop = "relatedLink" })</h4>
+    <p>Answers to some frequently asked questions regarding Marquette Nutrition and Fitness.</p>
+    <h4>@Html.ActionLink("Location", "Location", null, new { itemprop = "relatedLink" })</h4>
+    <p>Map and directions to the Marquette Nutrition and Fitness office.</p>
+    <h4>@Html.ActionLink("Forms", "Forms", null, new { itemprop = "relatedLink" })</h4>
+    <p>Forms you'll need to fill out prior to your first appointment.</p>
+    <h4>@Html.ActionLink("Media", "Media", null, new { itemprop = "relatedLink" })</h4>
+    <p>Links to audio and videos on Nutrition that Christine has filmed for LiveStrong.com, and other sites and online radio shows.</p>
+    <h4>@Html.ActionLink("Contact Us", "Create", "Contact", null, new { itemprop = "relatedLink" })</h4>
+    <p>Use this form to ask a question of our registered dietitian, schedule an appointment, or request more information 
+    about your diet and nutrition options.</p>
+    
+</div>

@@ -1,0 +1,29 @@
+﻿@model  MNF4.Models.PayPal
+
+@{
+    ViewBag.Title = "PostToPayPal";
+ }
+
+<h1>Redirecting to Paypal</h1>
+
+<form id="frm" action="@ViewBag.actionURL">
+    @Html.HiddenFor(model => model.cmd)
+    @Html.HiddenFor(model => model.business)
+    @Html.HiddenFor(model => model.@return)
+    @Html.HiddenFor(model => model.cancel_return)
+    @Html.HiddenFor(model => model.notify_url)
+    @Html.HiddenFor(model => model.currency_code)
+    @Html.HiddenFor(model => model.item_name)
+    @Html.HiddenFor(model => model.amount)
+</form>
+
+<h4>Redirecting to Paypal . . . </h4>
+
+<script type="text/javascript" language="javascript">
+    $(this.document).ready(function () {
+        var frm = $("form");
+        frm.submit();
+    })
+</script>
+
+

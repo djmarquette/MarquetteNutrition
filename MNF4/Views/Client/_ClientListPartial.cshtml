@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MNF4.ViewModels.ClientListViewModel>
+
+@ViewData["Count"] Contact(s) meet search criteria
+
+@{ 
+    var grid = new WebGrid(Model, canPage: true, ajaxUpdateContainerId: "grid", rowsPerPage: 20);
+    grid.Pager(WebGridPagerModes.All);
+   
+    @grid.GetHtml(htmlAttributes: new { id = "grid" }, alternatingRowStyle: "altGridRow",
+        columns: grid.Columns(
+        grid.Column(header: "Client Name", format: 
+            (item) => @Html.ActionLink((string)item.client.FirstName + " " + (string)item.client.LastName, "Details", "Client", new { id = item.client.ID }, null), canSort: false),
+        grid.Column(header: "Phone", format: (item) => item.client.Phone, canSort: false),
+        grid.Column(header: "Email Address", format: (item) => item.client.EmailAddress, canSort: false),
+        grid.Column(header: "Notes", format: (item) => @CustomHelpers.Truncate(item.client.Notes, 50), canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Edit", "Edit", new { id = item.client.ID }), canSort: false),
+        grid.Column(format: (item) => @Html.ActionLink("Delete", "Delete", new { id = item.client.ID }))
+    ));
+}
+

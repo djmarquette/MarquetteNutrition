@@ -1,0 +1,56 @@
+﻿@model MNF4.Models.Contact
+           
+<table style="width: 100%">
+    <tr>
+        <td class="leftColumn">
+            <div class="display-label">Name</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)
+            </div>
+            <div class="display-label">@Html.LabelFor(model => model.Address)</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Address)
+                <br />
+                @Html.DisplayFor(model => model.City) @Html.DisplayFor(model => model.State) @Html.DisplayFor(model => model.ZipCode)
+            </div>
+            <div class="display-label">@Html.LabelFor(model => model.Phone)</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Phone)
+            </div>
+            <div class="display-label">Email Address</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.EmailAddress)
+            </div>
+            <div class="display-label">
+                Opt-In for Newsletter?&nbsp; 
+                @Html.DisplayFor(model => model.optIn)
+            </div>
+        </td>
+        <td class="rightColumn">
+            <div class="display-label">Contacted?&nbsp; 
+                @Html.DisplayFor(model => model.Contacted)
+            </div>
+            <div class="display-label">Contact Notes</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.ContactNotes)
+            </div>
+            <div class="display-label">Source</div>
+            <div class="display-field">
+                @ViewBag.Source.Name
+            </div>
+            <div class="display-label">Submit Date</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.SubmitDate)
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="clear" colspan="2" >
+            <div class="display-label">Comments</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Comments)
+            </div>
+        </td>
+    </tr>
+</table>
+

@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Weight Management";
+    ViewBag.Description = @"Christine specializes in diet and weight management including a new DNA test for those who 
+    have “tried everything” and still cannot lose weight.";
+}
+
+<div data-role="content" itemscope="itemscope" itemtype="http://schema.org/MedicalWebPage">
+    <link itemprop="audience" href="http://schema.org/Patient" />
+    <link itemprop="specialty" href="http://schema.org/DietNutrition" />
+    <h1>Weight Management</h1>
+    <p>
+        Have you tried several different diets in an effort to lose weight, but can’t seem to find one 
+        that works for you?&nbsp; Were you successful at the low carb diet, but not the low fat diet, or vice 
+        versa?&nbsp; Have you found that no matter how much exercise you do, you can’t seem to lose weight? &nbsp; Your 
+        genetics may be an answer to these questions!&nbsp; There is a comprehensive DNA test that is called Gene SNP that 
+        I have begun to use in my practice for those individuals who have “tried everything” and still cannot lose weight.
+    </p>
+    <p>
+        This is the most comprehensive home genetic test kit for nutritional health that I have seen.&nbsp; Not only do you 
+        find out what type of exercise is best for your body (e.g. endurance or strength training) for weight management, but 
+        you also find out nutritional information in regards to heart health, bone health, insulin resistance, detoxification, 
+        inflammation, and alcohol metabolism.
+    </p>
+
+    <div id="dnaimage">
+        <img alt="dnaHelix" title="DNA Helix" src="/Content/Images/dnahelix.jpg" />
+    </div>
+    <p>
+        Research into how nutrition affects genetics and vice versa has been going on for decades.&nbsp; More recently the 
+        term "epigenetics" has been used to describe how a person's overall environment - which includes environmental exposures, 
+        exercise, and nutrition - effects the expression of their genes.&nbsp; What that means is that even though our DNA does 
+        not change, what foods we eat, what types of exercise we do, and what type of environmental toxins we are exposed to 
+        affect how our genes perform.&nbsp; If we know exactly what nutrients and what types of exercise are best for OUR body 
+        type, we can keep our weight normal AND stay healthy!
+    </p>
+    <p>
+        The procedure for getting tested is quite simple.&nbsp; The test kit comes with two long swabs that you rub against the 
+        inside of your cheeks.&nbsp; You then let them air dry for about 15 minutes.&nbsp; Next, you place the dry swabs into the 
+        provided mailer and drop in the regular mail.&nbsp; You then fill out an online lifestyle questionnaire which will be taken 
+        into account when your test results are being analyzed and your action plan developed.&nbsp; Why?&nbsp; Remember that your 
+        lifestyle (your environment) impacts which genes are turned on and off, so that will have an effect on your action plan.&nbsp; 
+        Within 3-4 weeks you will get your results back and can begin your journey!
+    </p>
+
+    <div class="clear">
+        @Html.Partial("_OptInPartial")
+    </div>
+
+    <p class="clear">
+        Are you ready to take charge of your weight management efforts? &nbsp; 
+        Then @Html.ActionLink("Contact Us", "Index", "Contact") today to set up an initial appointment.
+    </p>
+</div>

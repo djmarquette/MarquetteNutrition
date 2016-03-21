@@ -1,0 +1,36 @@
+﻿@model MNF4.ViewModels.ContactFormViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+<h1>Edit @ViewData["Edit"]</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Contact</legend>
+        @Html.HiddenFor(model => model.ID)
+        @Html.Partial("_ContactFormPartial") @*Shared between Create/Edit*@
+        <br />
+        <div class="DisplayLabel">
+            @Html.CheckBoxFor(model => model.Contacted)&nbsp; <strong>Person has been contacted?</strong>
+        </div>
+        <div class="display-label">Contact Notes</div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.ContactNotes)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SourceID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.SourceID, new SelectList(Model.Source, "ID", "Name", Model.SourceID))
+            @Html.ValidationMessageFor(model => model.Source)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Blog";
+    ViewBag.Description = @"Our blog contains commentary, information, and updates relating to our business and 
+    your general nutritional health and fitness.";
+}
+
+<h1>Marquette Nutrition and Fitness Blog</h1>
+
+<div data-role="content">
+    @foreach (var item in Model.Items)
+    {
+        int idx = item.Links.Count;
+        Uri itemLink = item.Links[idx-1].Uri;     // should end up with the last link index
+        {
+            <div id="postTitle">@item.Title.Text</div>
+            <div><a id="postLink" href=@itemLink target="_blank">@itemLink</a></div>
+            <div id="postPubDate">@String.Format("{0:MMMM d, yyyy}", item.PublishDate.Date)</div><br/>
+            <div id="postContent">@MvcHtmlString.Create(item.Content.Text)</div>
+        }
+    }
+</div>

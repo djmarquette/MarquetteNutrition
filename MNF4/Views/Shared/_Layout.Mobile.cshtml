@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <title>Marquette Nutrition & Fitness (mobile) | @ViewBag.Title</title>
+        <meta name="description" content="@ViewBag.Description" />
+        <meta name="robots" content="index" />
+        <meta name="keywords" content="dietitian,dietician,nutritionist,dietary supplements,fitness,nutrition,celiac,PCOS,
+        food sensitivities,food allergy,food allergy testing,LEAP,MRT,sports nutrition,nutritional supplements,vegetarian,
+        health fitness specialist,supplements,weight loss" />
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content="Austin" />
+        <meta name="geo.position" content="30.212322;-97.830884" />
+        <meta name="ICBM" content="30.212322, -97.830884" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="google-site-verification" content="oWqmW6H9PjSi73gd7MQFIHXCSKTvPQUM5i7jVQJeZ-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        @Styles.Render("~/Content/MobileCSS")
+        @Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval")  @*Must load jquery, then custom scripts, then jQueryMobile*@
+        
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function () {
+                // jQuery Mobile's Ajax navigation does not work in all cases (e.g.,
+                // when navigating from a mobile to a non-mobile page), especially when going back, hence disabling it.
+                $.mobile.ajaxEnabled = false;
+            });
+        </script>
+        @Scripts.Render("~/bundles/jquerymobile")
+        @Scripts.Render("~/bundles/modernizr")
+
+        @RenderSection("scripts", required: false)
+    </head>
+    <body  itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <div data-role="page" class="page">
+            <header data-role="header" data-theme="d">
+                @Html.Partial("_ViewSwitcher")
+                <div id="LayoutTitle">
+                    <a href="/">
+                        <img id="MNFLogo" alt="MNF Logo" title="Marquette Nutrition & Fitness" src="/Content/Images/MNFLogo.jpg" />
+                    </a>
+                </div>
+                @*<nav>
+                    <div data-role="navbar" data-theme="c">
+                        <ul id="menu" itemprop="breadcrumb">
+                            <li>@Html.ActionLink("Home", "Index", "Home", null, new { data_prefetch = true })</li>
+                            <li>@Html.ActionLink("Specialties", "Index", "Specialties", null, new { data_prefetch = true })</li>
+                            <li>@Html.ActionLink("Services","Index","Services", null, new{data_prefetch = true} )</li>
+                            <li>@Html.ActionLink("About Us", "Index", "About", null, new { data_prefetch = true })</li>
+                        </ul>
+                    </div>
+                </nav>
+                @if (true)  // always true, put device detection here
+                {
+                <h2 id="btnCallUs"><a href="tel:+15124684338" data-role="button">Call Marquette Nutrition</a></h2>
+                }*@
+            </header>
+            <section id="main" data-role="content" data-theme="f">
+                @RenderBody()
+                @ViewData["Exception"]
+            </section>
+            @*<footer>
+                <div>
+                    <ul id="socialIconsBtm" >
+                        <li><a href="http://www.linkedin.com/in/christinemarquette"  target="_blank">
+                                <img src="/Content/Images/linkedin.png" alt="LinkedIn" title="Connect with us on LinkedIn" /></a>
+                        </li>
+                        <li><a href="http://www.twitter.com/ChrisMarquette" target="_blank">
+                                <img src="/Content/Images/twitter.png" alt="Twitter" title="Follow me on Twitter" /></a>
+                        </li>
+                        <li><a href="http://www.facebook.com/marquette.nutrition.and.fitness" target="_blank">
+                                <img src="/Content/Images/facebook.png" alt="Facebook" title="Like us on Facebook" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress"> 3421 W William Cannon Drive, Suite 145</span>, 
+                    <span itemprop="addressLocality">Austin</span>, 
+                    <span itemprop="addressRegion">TX</span> 
+                    <span itemprop="postalCode">78745</span>
+                </div>
+                <div itemscope="itemscope" itemtype="http://schema.org/ContactPoint"> &nbsp; ph: 
+                    <span itemprop="telephone"> &#53;&#49;&#50;&#45;&#52;&#54;&#56;&#45;&#52;&#51;&#51;&#56;</span>
+                </div>
+            
+                <p id="plusOne">Recommend this page to your friends by clicking +1<br />
+                    <!-- Place this tag where you want the +1 button to render -->
+                    <g:plusone></g:plusone>
+                </p>
+            </footer>*@
+        </div>
+
+        @ViewData["Exception"]
+        @*Google Analytics Code*@
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-7665960-1");
+                pageTracker._trackPageview();
+            }
+            catch (err) { }
+        </script>
+        @*Google Analytics Code*@
+        <!-- Place this tag in your head or just before your close body tag -->
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+    </body>
+</html>

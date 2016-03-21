@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MNF4.ViewModels.EventListViewModel>
+
+@{
+    ViewBag.Title = "Events";
+    ViewBag.Description = @"Marquette Nutrition & Fitness offers various classes, seminars, and other events.  
+Use our contact page to request more information";
+}
+
+<h1>Upcoming Events</h1>
+<a id="RSVP"></a>
+
+<div>
+    <p>
+        @Html.Partial("_EventDisplayPartial")
+    </p>
+     
+    <p>
+        Enter your name and email address below to register for our newsletter  
+        @Html.Partial("_OptInPartial", new MNF4.ViewModels.OptInViewModel())
+    </p>
+    
+    <p>ABOUT CHRISTINE:</p>
+    <i>
+        Christine Marquette focuses on providing individualized nutrition and fitness programs for people in the following areas: 
+       &nbsp; celiac diesase, food allergies/sensitivities, vegetarian nutrition, sports nutrition, and weight management.&nbsp; 
+        She is the owner and operator of Marquette Nutrition & Fitness, LLC.&nbsp; She is credentialed as a registered and licensed 
+        dietitian (RD, LD) and is certified through the American College of Sports Medicine as a Health Fitness Specialist.&nbsp; In 
+        addition she has an advanced certification in food sensitivities as a Certified LEAP (Lifestyle, Eating and Performance) 
+        Therapist (CLT), has over 40 hours of continuing education specifically related to the management of Polycystic Ovarian Syndrome 
+        (PCOS), and has been trained in using intrinsic coaching methodology.&nbsp; What sets Christine apart from other dietitians/nutritionists 
+        and fitness professionals is her personal connection to the areas she works in, her listening skills, and her ability to translate 
+        research into do-able action steps that her clients can start on immediately.
+    </i>
+
+
+</div>

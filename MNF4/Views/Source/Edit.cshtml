@@ -1,0 +1,29 @@
+﻿@model MNF4.Models.Source
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h1>Edit @ViewData["Edit"]</h1>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>@ViewData["Edit"]</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        @Html.Partial("_SourceFormPartial")
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@Content.Script("jquery.validate.min.js", Url)
+@Content.Script("jquery.validate.unobtrusive.min.js", Url)

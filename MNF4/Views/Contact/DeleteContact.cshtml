@@ -1,0 +1,21 @@
+﻿@model MNF4.Models.Contact
+
+@{
+    ViewBag.Title = "Delete Contact";
+}
+
+<h1>Delete Contact</h1>
+
+<h3>Are you sure you want to delete @ViewData["Delete?"]?</h3>
+<fieldset>
+    <legend>@ViewData["Delete?"]</legend>
+
+    @Html.Partial("_ContactDetailsPartial")
+
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "List")
+    </p>
+}

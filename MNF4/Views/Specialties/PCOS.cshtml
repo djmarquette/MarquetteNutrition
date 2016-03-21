@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "PCOS";
+    ViewBag.Description = @"Polycystic Ovarian Syndrome (PCOS) is a hormonal imbalance that affects 6 – 10% of all 
+    women. Christine specializes in the nutritional treatment of PCOS.";
+}
+
+<div itemscope="itemscope" itemtype="http://schema.org/MedicalWebPage">
+    <link itemprop="audience" href="http://schema.org/Patient" />
+    <link itemprop="specialty" href="http://schema.org/DietNutrition" />
+    <h1>
+        <span itemprop="about" itemscope="itemscope" itemtype="http://schema.org/MedicalCondition">
+            <span itemprop="name">Polycystic Ovarian Syndrome</span>
+            (<span itemprop="name">PCOS</span>)
+        </span>
+    </h1>
+
+    <div>
+        <img id="PCOSjpg" src="/Content/Images/pcos.jpeg" alt="PCOS" title="PCOS" />
+    </div>
+    <div id="PCOSIntro">
+        <p>
+            Are you tired and frustrated with not being able to lose weight?&nbsp; Do feel like no matter what you do, 
+            you are not making any progress improving your symptoms?&nbsp; I understand; I have worked with MANY women who 
+            went through the same thing.
+        </p>
+        <p>
+            I can personally relate to some of these things because when I was a teenager, my doctor’s solution to my irregular 
+            cycles and acne was to simply put me on birth control pills.
+        </p>
+        <p>
+            I have completed well over 40 hours of continuing education through two different PCOS experts, and I continue to 
+            study the condition to this day.&nbsp; I am happy to say that I have been able to keep virtually all of my lab values 
+            and weight within normal limits and feel as healthy as ever.&nbsp; What’s just as great is the number of women I have 
+            worked with who have also been able to turn their lives around and experience relief from many of their symptoms.
+        </p>
+        <p>
+            Below is some basic information on PCOS to get you started.&nbsp; 
+        </p>
+    </div>
+    <div class="clear" />
+
+    <div>
+        @Html.Partial("_OptInPartial")
+    </div>
+
+    <h4>What is PCOS?</h4>
+    <p>
+        Polycystic Ovarian Syndrome (PCOS) is a hormonal imbalance that affects 6 – 10%
+        of all women (1). PCOS is characterized by high levels of androgens (hormones such
+        as testosterone) from the ovaries and is associated with insulin resistance. Tiny
+        cysts (“poly” cysts) may or may not surround the ovaries. These cysts are a result
+        of hormonal imbalances, not the cause of them (2). Dietary intervention is essential
+        to management, treatment and care. PCOS is the most common hormonal disorder among
+        women of reproductive age and is genetically linked.
+    </p>
+    <p>Women with PCOS may encounter some or all of the following:</p>
+    <ul>
+        <li>A 40% higher risk of diabetes by the age of 40</li>
+        <li>Increased cardiovascular risk</li>
+        <li>Increased weight gain and decreased weight loss success</li>
+        <li>Hyperinsulinimia (high levels of insulin)</li>
+        <li>Hypoglycemia (low levels of blood sugar)</li>
+        <li>Hyperlipidemia (high levels of lipids – cholesterol and triglycerides)</li>
+        <li>Struggles with acne and hirsutism (excessive hair growth on the face and body)</li>
+        <li>Cystic ovaries</li>
+        <li>Endometrial cancer</li>
+        <li>Heavy, irregular menstrual cycles</li>
+        <li>Depression</li>
+        <li>Eating disorders</li>
+        <li>Intense carbohydrate cravings</li>
+        <li>Infertility</li>
+        <li>Alopecia (hair loss from the head)</li>
+    </ul>
+    <h4>General Nutrition Recommendations</h4>
+    <p>
+        Not all women with PCOS are overweight.&nbsp; However, the majority of women who have PCOS are 
+        overweight or obese, a problem exacerbated by hyperinsulinimia.&nbsp; Women who are overweight 
+        and struggle with PCOS are encouraged to achieve a healthy weight.&nbsp; Since insulin 
+        resistance plays a key role in this disease, a low glycemic diet has been the favored approach 
+        to weight loss, instead of commonly recommended approaches, including a low fat, high carbohydrate 
+        diet.&nbsp; It is believed that due to high levels of insulin in the body, carbohydrates 
+        (especially refined carbohydrates) are more readily stored as fat.&nbsp; Complex carbohydrates 
+        are believed to be a better choice, especially when combined with a fat or protein, to slow the 
+        release of carbohydrate into the blood.
+    </p>
+    <p>
+        Dietary recommendations for PCOS include (3):
+    </p>
+    <ul>
+        <li>“Packaging” whole grain carbohydrates with a protein or a fat</li>
+        <li>Choosing unrefined carbohydrate sources with low glycemic indexes</li>
+        <li>Making carbohydrates a smaller portion of the diet.&nbsp; Consuming more protein and vegetable
+            based main dishes, and making pastas, breads, grains and cereals side items and
+            smaller portions.</li>
+        <li>Utilizing a multivitamin and considering a calcium supplement for
+            those who are not consuming 1,200 mg/day</li>
+        <li>Consuming a minimum of 8 glasses of water a day</li>
+        <li>Utilizing monounsaturated and polyunsaturated fats.&nbsp; Limiting consumption of
+            saturated fats and trans fats in the diet</li>
+        <li>Exercising.&nbsp; Both aerobic and anaerobic exercises are necessary for weight management,
+            cardiovascular health and metabolic functioning.</li>
+    </ul>
+    <h4>Other Treatment Recommendations</h4>
+    <p>
+        Treatment of PCOS often includes management of irregular menstrual cycles with an estrogen based 
+        birth control and an insulin lowering medication.&nbsp; Christine Marquette has over 40 hours of 
+        additional training in the management of PCOS, and is also a contributing author to the blog 
+        <a href="http://www.incyst.com/" target="_blank">InCyst on the Best!</a>.&nbsp; PCOS 
+        research concludes that lifestyle factors, primarily dietary modification, are the most promising
+        intervention for this disease.&nbsp; For PCOS friendly products and deals, check out the 
+        latest <a href="http://us2.campaign-archive2.com/?u=0da794289c986265636ff0ba5&id=e292705596&eo=a3ca4e114b" 
+                  target="_blank">InCyst newsletter</a>.
+    </p>
+    <p>
+        Many studies have shown that improvements in eating patterns and/or weight loss can reduce insulin and 
+        androgen levels.&nbsp; Marquette Nutrition & Fitness, LLC. can provide you an individualized dietary 
+        approach to managing PCOS.&nbsp; @Html.ActionLink("Contact Us", "Index", "Contact") to 
+        make an appointment.  Christine has also written a series of ebooks and audio books on understanding and managing
+        PCOS.&nbsp; These are available for purchase on our @Html.ActionLink("ebooks", "PCOS", "ebooks") page.
+    </p>
+    <p>
+        References:
+    </p>
+    <p>
+        1. Setji, TL, Brown, AJ. Comprehensive clinical management of polycystic ovarian
+        syndrome. Minerva Med. June 2007, 175-89.</p>
+    <p>
+        2. Grassi, Angela. <a href="http://www.PCOSnutrition.com" target="_blank">www.PCOSnutrition.com</a>
+    </p>
+    <p>
+        3.  McKittrick, M.
+        <a href="http://www.obgyn.net/pcos/pcos.asp?page=/pcos/articles/pcos_and_diet_mckittrick" 
+           target="_blank">PCOS and diet</a>.&nbsp; OBGYN.net Publications. Retrieved on September 20, 2007. 
+    </p>
+</div> 

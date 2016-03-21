@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "Austin TX Dietitian / Nutritionist";
+    ViewBag.Description = @"Christine Marquette is a dietitian/nutritionist in Austin, TX specializing in Celiac,food allergies,
+PCOS,sports and vegetarian nutrition and supplements.";
+}
+
+
+<div id="indexpage" itemscope="itemscope">
+    
+
+
+    
+    <h1 class="center" itemprop="name">Welcome to Marquette Nutrition and Fitness!</h1>
+    <div id="MNFVideo" itemprop="video" itemscope="itemscope" itemtype="http://schema.org/VideoObject">
+        <meta itemprop="duration" content="PT47S" />
+        <meta itemprop="contentUrl" content="http://www.youtube.com/embed/mr0HZGgMl_c" />
+        <iframe id="ytFrame" src="http://www.youtube.com/embed/mr0HZGgMl_c?wmode=opaque"></iframe>
+    </div>
+
+    @*<div id="TrophyPic">
+        <img id="RunningTrophy" alt="RunningTrophy" title="Running Trophy" src="/Content/Images/ChrisTrophy.jpg"/>
+    </div>*@ 
+    
+    <h4>
+        @Html.Partial("_NoNewClientsPartial")
+    </h4>
+    
+    <div class="colmask threecol">
+        <div class="colmid">
+            <div class ="columnsContainer">
+                <div class="colCenter">
+                    <h5 class="center">Do the impossible!</h5>
+                    <p>
+                        Everyone is busy these days, and many find it challenging not only knowing what to eat but also how to find the 
+                        time to eat healthy and exercise.&nbsp; My passion is teaching others how to create strategies to take action, overcome 
+                        obstacles and make the changes needed to keep things under control.
+                    </p>
+                    <p>
+                        Since I have been working in private practice, I have focused on areas that I have personal experience with, and 
+                        have been able to devote the time needed to develop my expertise in those categories.&nbsp; As a result, I can truly 
+                        help my clients achieve their goals.
+                    </p>
+                    <p id="StrategySessionIntro">
+                        Wondering if I can help you transform your nutrition and fitness?&nbsp; @Html.ActionLink("Apply here", "StrategySession", "Survey") 
+                        for a FREE strategy session to find out.&nbsp; Your form will be reviewed and you will be contacted within 2 business 
+                        days.&nbsp; As a “thank you” for filling out the application, you will receive a complimentary subscription to our 
+                        monthly newsletter.
+                    </p>
+                </div>
+                <div id="HomeIntro" class="colLeft">
+                    <h5 class="center">Are you living life as it should be?</h5>
+                    <p>
+                        The foundation for living your best life begins with your health.&nbsp; Achieving optimal health starts with 
+                        eating right and staying physically active.&nbsp; I have personally experienced the transformation that can 
+                        happen to your outlook on life and your well being by fine tuning nutrition and fitness routines.&nbsp; That 
+                        is why I am on a mission to empower others to improve their eating and exercise habits in order to build that 
+                        foundation.
+                    </p>
+
+                </div>
+                <div class="colRight">
+                    <h5 class="center">Get it all done!</h5>
+                    <p>
+                        I work best with people who are ready and willing to do the work necessary to makeover their lifestyle.&nbsp; These 
+                        are people who will take action needed to bring to light potential obstacles, take responsibility for overcoming these 
+                        obstacles, and make certain they master the strategies we develop to reach their goals.
+                    </p>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+        @Html.Partial("_OptInPartial")
+    </div>
+
+    <div id="TrailRunning">
+        <img id="TrailRunningPic"  alt="Chris Trail Running" title="Chris trail running" src="/Content/Images/ChrisTrailRunning.JPG" />
+    </div>
+    <div id="HomeBody">
+        <p>
+            Whether you are an athlete looking to improve your performance, a new vegetarian
+            learning how to balance your diet, or dealing with conditions related to food sensitivities,
+            allergies, or intolerances, we are here to serve you.&nbsp; We specialize in providing
+            medical nutrition therapy for: 
+        </p>
+        <ul id="SpecialtiesList">
+            <li>@Html.ActionLink("Celiac Disease", "Celiac", "Specialties")</li>
+            <li>@Html.ActionLink("Food Reactions", "FoodReactions", "Specialties")
+                <ul>
+                    <li>Irritable Bowel Syndrome (IBS)</li>
+                    <li>Fibromyalgia</li>
+                    <li>Migraines</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Polycystic Ovarian Syndrome (PCOS)", "PCOS", "Specialties")</li>
+            <li>@Html.ActionLink("Sports Nutrition", "Sports", "Specialties")</li>
+            <li>@Html.ActionLink("Vegetarian Nutrition", "Vegetarian", "Specialties")</li>
+            <li>@Html.ActionLink("Weight Management", "Weight", "Specialties")</li>
+        </ul>
+        <p>In addition, we also 
+            provide fitness assessments and counseling for general nutrition, health, and wellness.&nbsp; Find more detail
+            about all of our offerings on our @Html.ActionLink("Specialties", "Index", "Specialties") page.
+        </p>
+        <p>
+            Marquette Nutrition and Fitness is staffed by a registered and licensed dietitian, and ACSM certified
+            health fitness specialist, who is trained in the use of Intrinsic Coaching® to help people achieve their 
+            best thinking in order to set realistic goals.&nbsp; @Html.ActionLink("Christine Marquette, RD, LD, CLT, HFS", "Chris", "About"), 
+            also has advanced training in treating food sensitivities using the LEAP ImmunoCalm Diet, and has been an 
+            endurance athlete for many years.
+        </p>
+        <p>
+            Explore our site to learn more.&nbsp; When you are ready, fill out our @Html.ActionLink("Contact Form", "Index", "Contact") to 
+            ask a question or request an appointment.
+        </p>
+    </div>
+
+    <div class="clear center">
+        <img id="QRContact" alt="QR Code" title="Scan here with your Smartphone to add our contact info"
+             src="/Content/Images/QRChrisContactMd.png" />
+        <div> Scan here with your smart phone to easily access our contact info.</div>
+    </div>
+</div>
+

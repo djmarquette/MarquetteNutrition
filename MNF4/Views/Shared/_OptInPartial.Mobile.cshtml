@@ -1,0 +1,39 @@
+﻿@model MNF4.ViewModels.OptInViewModel
+<div id="optInTarget" data-role="content">
+    <h5 id="optInMsg">@Model.oiMessage</h5>
+    <h5 id="optInResult">@Model.oiResult</h5>
+
+    @using (Ajax.BeginForm("OptIn", new AjaxOptions
+    {
+        HttpMethod = "Get",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "optInTarget",
+    }))
+    {
+        <fieldset>
+            <legend></legend>
+            <div data-role="fieldcontain">
+                @Html.LabelFor(model => model.FirstName)<br />
+                @Html.EditorFor(model => model.FirstName)
+            </div>
+            <div data-role="fieldcontain">
+                @Html.LabelFor(model => model.LastName)<br/>
+                @Html.EditorFor(model => model.LastName)
+            </div>
+            <div data-role="fieldcontain">
+                @Html.LabelFor(model => model.EmailAddress)<br/>
+                @Html.EditorFor(model => model.EmailAddress)
+            </div>
+            <div data-role="controlgroup">
+                <input type="submit" value="Submit" data-role="button" data-inline="true" data-theme="c" /> &nbsp;
+                <input type="reset" value="Reset" data-role="button" data-inline="true" data-theme="c" />
+            </div>
+            <div data-role="fieldcontain">
+                <span id="noSpam">No Spam Promise: We will never share your information!</span><br/>
+                @Html.ValidationSummary("Please correct the following errors and try again")
+            </div>
+            <input class="botCheck" type="hidden" value="" />
+        </fieldset>
+        @ViewData["Exception"]
+    }
+</div>
